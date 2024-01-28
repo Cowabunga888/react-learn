@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import AppRouterProvider from './components/providers/react-router-provider';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppMantineProvider from './components/providers/mantine-provider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <AppMantineProvider>
+      <AppRouterProvider />
+    </AppMantineProvider>
   </React.StrictMode>
 );
 
