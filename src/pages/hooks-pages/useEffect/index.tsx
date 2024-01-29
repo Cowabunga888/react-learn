@@ -3,6 +3,7 @@ import UseEffectGeneral from "./useEffect-general"
 import UseEffectNoDeps from "./useEffect-no-deps"
 import UseEffectEmptyDeps from "./useEffect-empty-deps"
 import UseEffectWithDeps from "./useEffect-with-deps"
+import UseEffectDOMEvent from "./advance/useEffect-DOM-event"
 
 function UseEffectPage() {
 
@@ -30,6 +31,12 @@ function UseEffectPage() {
       tab_inner_text: 'UseEffect With Deps',
       panel: <UseEffectWithDeps />,
       icon: '4. '
+    },
+    {
+      tab_value: 'useEffect-DOM-event',
+      tab_inner_text: 'UseEffect DOM Event',
+      panel: <UseEffectDOMEvent />,
+      icon: '5. '
     },
   ]
 

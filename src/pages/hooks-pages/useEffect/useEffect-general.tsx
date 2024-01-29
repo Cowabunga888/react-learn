@@ -11,6 +11,7 @@ function UseEffectGeneral() {
         <p>3. useEffect(callback, [deps])</p>
         <p>===================================</p>
         <p className='text-red-400'>## Call back trong useEffect luôn luôn được gọi sau khi component mounted</p>
+        <p className='text-red-400'>## Clean up func luôn được gọi trước khi component unmounted</p>
         <p>## Tương ứng 3 case trên thì:</p>
         <p>1. Callback được gọi mỗi khi component re-render -- ít khi dùng</p>
         <p>2. Callback được gọi duy nhất 1 lần sau khi component mounted</p>
@@ -36,6 +37,7 @@ function UseEffectGeneral() {
   3. useEffect(callback, [deps])
   ===================================
   ## Call back trong useEffect luôn luôn được gọi sau khi component mouted
+  ## Clean up func luôn được gọi trước khi component unmounted
   ## Tương ứng 3 case trên thì:
   1. Callback được gọi mỗi khi component re-render
   2. Callback được gọi duy nhất 1 lần sau khi component mouted

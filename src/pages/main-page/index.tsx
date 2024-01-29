@@ -1,5 +1,5 @@
 import { Tabs } from '@mantine/core';
-import { RiContrastDropLine, RiLoopLeftLine } from "@remixicon/react";
+import { RiContrastDropLine, RiLoopLeftLine, RiReactjsLine } from "@remixicon/react";
 import { Outlet } from 'react-router-dom';
 import UseEffectPage from '../hooks-pages/useEffect';
 import UseStatePage from '../hooks-pages/useState';
@@ -23,7 +23,9 @@ function MainPage() {
   ]
   return (
     <div className="p-2">
-      <h2 className="p-2 text-center text-base font-bold uppercase">Học React Hooks</h2>
+      <div className="p-2 text-center text-xl text-[#788AEB] font-bold uppercase flex items-center justify-center">
+        <RiReactjsLine /> <span>Học React Hooks</span>
+      </div>
       <Tabs variant="outline" defaultValue={tabData[0].tab_value}>
 
         <Tabs.List>
