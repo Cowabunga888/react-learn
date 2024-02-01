@@ -11,7 +11,7 @@ interface Props {
 
 const AppBlockQuote: React.FC<Props> = ({ children, innerText, text, className }) => {
     return (
-        <Blockquote className={className} style={{ paddingLeft: 15 }} color="lime" iconSize={30} icon={<RiInformationLine />} mt="xl">
+        <Blockquote className={className + ' text-green-700 font-semibold text-sm'} style={{ paddingLeft: 15 }} color="lime" iconSize={30} icon={<RiInformationLine />} mt="xl">
             {children}
             {
                 innerText && (

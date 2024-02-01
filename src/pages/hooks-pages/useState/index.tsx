@@ -24,12 +24,12 @@ function UseStatePage() {
     return (
         <div className="">
             <div className="flex items-center justify-start gap-2">
-                <Button onClick={handleClickIncrease} radius="xs" size="xs" variant="filled" color="lime">
-                    <RiAddLine />
-                </Button>
-                <h2 className="text-lg font-semibold">{counter}</h2>
                 <Button onClick={handleClickDecrease} radius="xs" size="xs" variant="filled" color="lime">
                     <RiSubtractLine />
+                </Button>
+                <h2 className="text-lg font-semibold">{counter}</h2>
+                <Button onClick={handleClickIncrease} radius="xs" size="xs" variant="filled" color="lime">
+                    <RiAddLine />
                 </Button>
 
             </div>
