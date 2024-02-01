@@ -4,14 +4,14 @@ import AppBlockQuote from '../../../components/block-quotes'
 function UseEffectGeneral() {
 
   return (
-    <>
-      <AppBlockQuote>
+    <AppBlockQuote>
         <p>1. useEffect(callback)</p>
         <p>2. useEffect(callback, [])</p>
         <p>3. useEffect(callback, [deps])</p>
         <p>===================================</p>
-        <p className='text-red-400'>## Call back trong useEffect luôn luôn được gọi sau khi component mounted</p>
+        <p className='text-red-400'>## Callback trong useEffect luôn luôn được gọi sau khi component mounted</p>
         <p className='text-red-400'>## Clean up func luôn được gọi trước khi component unmounted</p>
+        <p className='text-red-400'>## Clean up func luôn được gọi từ lần t2 trở đi sau mỗi lần component unmounted hoặc rerender</p>
         <p>## Tương ứng 3 case trên thì:</p>
         <p>1. Callback được gọi mỗi khi component re-render -- ít khi dùng</p>
         <p>2. Callback được gọi duy nhất 1 lần sau khi component mounted</p>
@@ -26,8 +26,6 @@ function UseEffectGeneral() {
         <p>## componentWillMount || render || componentDidMount</p>
         <p>## Khái niệm mount === componentDidMount</p>
       </AppBlockQuote>
-
-    </>
   )
 }
 
@@ -36,8 +34,9 @@ function UseEffectGeneral() {
   2. useEffect(callback, [])
   3. useEffect(callback, [deps])
   ===================================
-  ## Call back trong useEffect luôn luôn được gọi sau khi component mouted
+  ## Callback trong useEffect luôn luôn được gọi sau khi component mounted
   ## Clean up func luôn được gọi trước khi component unmounted
+  ## Clean up func luôn được gọi từ lần t2 trở đi sau mỗi lần component unmounted hoặc rerender
   ## Tương ứng 3 case trên thì:
   1. Callback được gọi mỗi khi component re-render
   2. Callback được gọi duy nhất 1 lần sau khi component mouted

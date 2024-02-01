@@ -4,6 +4,7 @@ import UseEffectNoDeps from "./useEffect-no-deps"
 import UseEffectEmptyDeps from "./useEffect-empty-deps"
 import UseEffectWithDeps from "./useEffect-with-deps"
 import UseEffectDOMEvent from "./advance/useEffect-DOM-event"
+import UseEffectTimeoutFunc from "./advance/useEffect-timeout-func"
 
 function UseEffectPage() {
 
@@ -37,6 +38,12 @@ function UseEffectPage() {
       tab_inner_text: 'UseEffect DOM Event',
       panel: <UseEffectDOMEvent />,
       icon: '5. '
+    },
+    {
+      tab_value: 'useEffect-timeout-func',
+      tab_inner_text: 'UseEffect Timeout Func',
+      panel: <UseEffectTimeoutFunc />,
+      icon: '6. '
     },
   ]
 

@@ -24,7 +24,7 @@ function MainPage() {
   return (
     <div className="p-2">
       <div className="p-2 text-center text-xl text-[#788AEB] font-bold uppercase flex items-center justify-center">
-        <RiReactjsLine /> <span>Học React Hooks</span>
+        <RiReactjsLine /> <span>React Hooks</span>
       </div>
       <Tabs variant="outline" defaultValue={tabData[0].tab_value}>
 
