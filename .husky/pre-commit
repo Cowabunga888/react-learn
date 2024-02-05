@@ -1,0 +1,4 @@
+echo 'Running Git Hooks'
+echo "🔎... Checking validity of types with TypeScript"
+
+npm run lint-staged
