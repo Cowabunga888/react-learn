@@ -15,7 +15,7 @@ function UseEffectUploadImg() {
 		// dọn url blob cũ bằng clean up func trong useEffect
 
 		return () => {
-			imgUrl &&                            URL.revokeObjectURL(imgUrl)
+			imgUrl && URL.revokeObjectURL(imgUrl)
 		}
 	}, [imgUrl])
 
