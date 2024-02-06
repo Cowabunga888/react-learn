@@ -3,6 +3,7 @@ import { RiContrastDropLine, RiLoopLeftLine, RiReactjsLine } from '@remixicon/re
 import { Outlet } from 'react-router-dom'
 import UseEffectPage from '../hooks-pages/useEffect'
 import UseStatePage from '../hooks-pages/useState'
+import UseLayoutEffectPage from '../hooks-pages/useLayoutEffect'
 
 function MainPage() {
 	const size = 16
@@ -18,6 +19,12 @@ function MainPage() {
 			tab_value: 'useEffect',
 			tab_inner_text: 'UseEffect',
 			panel: <UseEffectPage />,
+			icon: <RiLoopLeftLine size={size} color={color} />,
+		},
+		{
+			tab_value: 'useLayoutEffect',
+			tab_inner_text: 'UseLayoutEffect',
+			panel: <UseLayoutEffectPage />,
 			icon: <RiLoopLeftLine size={size} color={color} />,
 		},
 	]

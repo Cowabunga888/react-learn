@@ -25,7 +25,7 @@ function UseEffectUploadImg() {
 
 			{imgUrl && (
 				<div className="w-[300px] h-[300px]">
-					<img src={imgUrl} className="w-full h-full object-cover" />
+					<img alt="upload-img" src={imgUrl} className="w-full h-full object-cover" />
 				</div>
 			)}
 		</>

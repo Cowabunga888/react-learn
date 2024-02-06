@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 
 function UseEffectGeneral() {

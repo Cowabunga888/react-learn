@@ -23,7 +23,7 @@ function UseStatePage() {
 
 	return (
 		<div className="">
-			<div className="flex items-center justify-start gap-2">
+			<div className="flex items-center justify-center gap-2">
 				<Button onClick={handleClickDecrease} radius="xs" size="xs" variant="filled" color="lime">
 					<RiSubtractLine />
 				</Button>
