@@ -18,7 +18,7 @@ function UseLayoutEffectPage() {
 			<div className="flex items-center justify-center gap-2">
 				<Button
 					onClick={() => {
-						setCount((prev) => prev + 1)
+						setCount(count + 1)
 					}}
 					radius="xs"
 					size="xs"
