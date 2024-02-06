@@ -1,9 +1,10 @@
 import { Tabs } from '@mantine/core'
-import { RiContrastDropLine, RiLoopLeftLine, RiReactjsLine } from '@remixicon/react'
+import { RiCodeSSlashLine, RiContrastDropLine, RiLoopLeftLine, RiReactjsLine } from '@remixicon/react'
 import { Outlet } from 'react-router-dom'
 import UseEffectPage from '../hooks-pages/useEffect'
-import UseStatePage from '../hooks-pages/useState'
 import UseLayoutEffectPage from '../hooks-pages/useLayoutEffect'
+import UseRefPage from '../hooks-pages/useRef'
+import UseStatePage from '../hooks-pages/useState'
 
 function MainPage() {
 	const size = 16
@@ -26,6 +27,12 @@ function MainPage() {
 			tab_inner_text: 'UseLayoutEffect',
 			panel: <UseLayoutEffectPage />,
 			icon: <RiLoopLeftLine size={size} color={color} />,
+		},
+		{
+			tab_value: 'useRef',
+			tab_inner_text: 'UseRef',
+			panel: <UseRefPage />,
+			icon: <RiCodeSSlashLine size={size} color={color} />,
 		},
 	]
 	return (

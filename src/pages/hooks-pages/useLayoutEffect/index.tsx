@@ -14,7 +14,7 @@ function UseLayoutEffectPage() {
 	}, [count])
 
 	return (
-		<div>
+		<>
 			<div className="flex items-center justify-center gap-2">
 				<Button
 					onClick={() => {
@@ -46,7 +46,7 @@ function UseLayoutEffectPage() {
 				<p>4. Gọi useEffect callback func (sync)</p>
 				<p>5. Render UI</p>
 			</AppBlockQuote>
-		</div>
+		</>
 	)
 }
 
