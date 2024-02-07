@@ -1,40 +1,11 @@
 import { Tabs } from '@mantine/core'
-import { RiCodeSSlashLine, RiContrastDropLine, RiLoopLeftLine, RiReactjsLine } from '@remixicon/react'
+import { RiReactjsLine } from '@remixicon/react'
 import { Outlet } from 'react-router-dom'
-import UseEffectPage from '../hooks-pages/useEffect'
-import UseLayoutEffectPage from '../hooks-pages/useLayoutEffect'
-import UseRefPage from '../hooks-pages/useRef'
-import UseStatePage from '../hooks-pages/useState'
+import useTabData from './hooks/data'
 
 function MainPage() {
-	const size = 16
-	const color = '#788AEB'
-	const tabData = [
-		{
-			tab_value: 'useState',
-			tab_inner_text: 'UseState',
-			panel: <UseStatePage />,
-			icon: <RiContrastDropLine size={size} color={color} />,
-		},
-		{
-			tab_value: 'useEffect',
-			tab_inner_text: 'UseEffect',
-			panel: <UseEffectPage />,
-			icon: <RiLoopLeftLine size={size} color={color} />,
-		},
-		{
-			tab_value: 'useLayoutEffect',
-			tab_inner_text: 'UseLayoutEffect',
-			panel: <UseLayoutEffectPage />,
-			icon: <RiLoopLeftLine size={size} color={color} />,
-		},
-		{
-			tab_value: 'useRef',
-			tab_inner_text: 'UseRef',
-			panel: <UseRefPage />,
-			icon: <RiCodeSSlashLine size={size} color={color} />,
-		},
-	]
+	const { data: tabData } = useTabData()
+
 	return (
 		<div className="p-2">
 			<div className="p-2 text-center text-xl text-[#788AEB] font-bold uppercase flex items-center justify-center">
@@ -53,7 +24,7 @@ function MainPage() {
 
 				{tabData.map((tab, i) => {
 					return (
-						<Tabs.Panel value={tab.tab_value} key={i}>
+						<Tabs.Panel value={tab.tab_value} key={tab.tab_value}>
 							<div className="pt-3">{tab.panel}</div>
 						</Tabs.Panel>
 					)
