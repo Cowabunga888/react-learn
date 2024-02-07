@@ -1,4 +1,3 @@
 {
-	"*": "npm run format",
-	"src/**/*.@(js|jsx|ts|tsx)": ["pretty-quick --staged"]
+	"*": "npm run format"
 }
