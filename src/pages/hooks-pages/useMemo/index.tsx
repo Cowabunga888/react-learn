@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 import { Button, Input } from '@mantine/core'
 
@@ -7,7 +7,16 @@ function UseMemoPage() {
 	const [price, setPrice] = useState<string>('')
 	const [product, setProduct] = useState<{ name: string; price: number }[]>([])
 
-	const total = product.reduce((result, prod) => result + prod.price, 0)
+	// để tránh việc hàm const total = ()=>{logic} sẽ chạy lại mỗi khi component rerender
+	// trong tình huống này useMemo sẽ giải quyết được
+	// const total = product.reduce((result, prod) => result + prod.price, 0)
+	//// việc tính toán lại total mỗi khi rerender là không cần thiết
+	//// vì ta chỉ có nhu cầu tính tổng giá sp khi giá trị product thay đổi
+
+	const total = useMemo(() => {
+		console.log('tính total...')
+		return product.reduce((result, prod) => result + prod.price, 0)
+	}, [product]) // deps thay đổi thì logic sẽ thực hiện lại
 
 	const handleAddProduct = () => {
 		setProduct([...product, { name, price: Number(price) }])
