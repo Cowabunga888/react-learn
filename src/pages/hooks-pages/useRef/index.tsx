@@ -58,7 +58,7 @@ function UseRefPage() {
 			</div>
 
 			<AppBlockQuote>
-				<p className="text-red-400 text-lg">## useRef</p>
+				<p className="text-red-400">## useRef</p>
 				<p>1. useRef giúp tạo ra 1 biến global cho component mà không cần mang biến đấy ra ngoài component</p>
 				<p>2. sau mỗi lần rereder biến uesRef không thay đổi hay reSet lại giá trị ban đầu</p>
 				<p>như useState trừ khi set lại ref.current = giá trị mới</p>

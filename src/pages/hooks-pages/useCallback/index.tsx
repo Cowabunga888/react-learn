@@ -41,7 +41,7 @@ function UseCallbackPage() {
 			</div>
 			<ChildComponent onIncrease={handleIncrease} />
 			<AppBlockQuote>
-				<p className="text-red-400 text-lg">## useCallback</p>
+				<p className="text-red-400">## useCallback</p>
 				<p>1. Tránh tạo ra các hàm mới không cần thiết trong component</p>
 				<p>- Mặc dù có memo nhưng child vẫn rerender</p>
 				<p>- Do func prop truyền vào child mang giá trị tham chiếu khác nhau</p>

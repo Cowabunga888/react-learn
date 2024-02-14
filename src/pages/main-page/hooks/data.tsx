@@ -13,6 +13,7 @@ import UseRefPage from '../../hooks-pages/useRef'
 import MemoPage from '../../hooks-pages/memo'
 import UseCallbackPage from '../../hooks-pages/useCallback'
 import UseMemoPage from '../../hooks-pages/useMemo'
+import UseReducerPage from '../../hooks-pages/useReducer'
 
 function useTabData() {
 	const size = 16
@@ -60,6 +61,12 @@ function useTabData() {
 			tab_inner_text: 'UseMemo',
 			panel: <UseMemoPage />,
 			icon: <RiBrainFill size={size} color={color} />,
+		},
+		{
+			tab_value: 'useReducer',
+			tab_inner_text: 'UseReducer',
+			panel: <UseReducerPage />,
+			icon: <RiContrastDropLine size={size} color={color} />,
 		},
 	]
 

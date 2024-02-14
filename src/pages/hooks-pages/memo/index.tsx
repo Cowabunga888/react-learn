@@ -39,7 +39,7 @@ function MemoPage() {
 			</div>
 			<ChildComponent count1={count1} />
 			<AppBlockQuote>
-				<p className="text-red-400 text-lg">## Memo</p>
+				<p className="text-red-400">## Memo</p>
 				<p>1. Là một HOC - Higher Order Component</p>
 				<p>2. Ghi nhớ các props của 1 component, tránh việc rerender component không cần thiết</p>
 			</AppBlockQuote>

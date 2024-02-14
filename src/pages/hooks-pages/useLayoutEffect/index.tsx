@@ -31,7 +31,7 @@ function UseLayoutEffectPage() {
 			</div>
 
 			<AppBlockQuote>
-				<p className="text-red-400 text-lg">## useEffect</p>
+				<p className="text-red-400">## useEffect</p>
 				<p>1. Cập nhật state</p>
 				<p>2. Cập nhật DOM (mutated)</p>
 				<p>3. Render UI</p>
@@ -39,7 +39,7 @@ function UseLayoutEffectPage() {
 				<p>5. Gọi useEffect callback func</p>
 			</AppBlockQuote>
 			<AppBlockQuote>
-				<p className="text-red-400 text-lg">## useLayoutEffect</p>
+				<p className="text-red-400">## useLayoutEffect</p>
 				<p>1. Cập nhật state</p>
 				<p>2. Cập nhật DOM (mutated)</p>
 				<p>3. Gọi clean up func nếu deps thay đổi (sync)</p>

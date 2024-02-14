@@ -73,7 +73,7 @@ function UseMemoPage() {
 			)}
 
 			<AppBlockQuote>
-				<p className="text-red-400 text-lg">## useMemo</p>
+				<p className="text-red-400">## useMemo</p>
 				<p>1. Giúp tránh thực hiện 1 logic nào đó không cần thiết</p>
 			</AppBlockQuote>
 		</div>
