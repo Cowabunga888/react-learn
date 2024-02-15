@@ -1,4 +1,3 @@
-import React from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 
 function UseReducerGeneral() {
@@ -10,7 +9,7 @@ function UseReducerGeneral() {
 					1. Bất kể logic nào giải quyết được bằng useState, useReducer đều có thể giải quyết được, và ngược
 					lại
 				</p>
-				<p>2. useReducer giái quyết tốt hơn đối với 1 số state phức tạp</p>
+				<p>2. useReducer giải quyết tốt hơn đối với 1 số state phức tạp</p>
 				<p>
 					3. vd: state có array object lồng nhau nhiều cấp, nhiều state trong component, hoặc state phụ thuộc
 					vào state khác

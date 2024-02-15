@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import AppBlockQuote from '../../../components/block-quotes'
 import { Button, Input } from '@mantine/core'
+import { useMemo, useState } from 'react'
+import AppBlockQuote from '../../../components/block-quotes'
 
 function UseMemoPage() {
 	const [name, setName] = useState<string>('')

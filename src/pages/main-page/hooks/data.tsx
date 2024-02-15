@@ -4,6 +4,7 @@ import {
 	RiBrainLine,
 	RiCodeSSlashLine,
 	RiContrastDropLine,
+	RiCustomerService2Line,
 	RiLoopLeftLine,
 } from '@remixicon/react'
 import UseStatePage from '../../hooks-pages/useState'
@@ -14,6 +15,7 @@ import MemoPage from '../../hooks-pages/memo'
 import UseCallbackPage from '../../hooks-pages/useCallback'
 import UseMemoPage from '../../hooks-pages/useMemo'
 import UseReducerPage from '../../hooks-pages/useReducer'
+import UseContextPage from '../../hooks-pages/useContext'
 
 function useTabData() {
 	const size = 16
@@ -67,6 +69,12 @@ function useTabData() {
 			tab_inner_text: 'UseReducer',
 			panel: <UseReducerPage />,
 			icon: <RiContrastDropLine size={size} color={color} />,
+		},
+		{
+			tab_value: 'useContext',
+			tab_inner_text: 'UseContext',
+			panel: <UseContextPage />,
+			icon: <RiCustomerService2Line size={size} color={color} />,
 		},
 	]
 
