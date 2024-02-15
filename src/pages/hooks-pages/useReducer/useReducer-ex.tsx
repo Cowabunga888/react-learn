@@ -20,21 +20,20 @@ const reducer = (state: number, action: string) => {
 			return state
 	}
 }
+
 function UseReducerEX() {
 	const [count, dispatch] = useReducer(reducer, initState)
 
 	return (
-		<>
-			<div className="flex items-center justify-center gap-2">
-				<Button onClick={() => dispatch(DOWN_ACTION)} radius="xs" size="xs" variant="filled" color="lime">
-					<RiSubtractLine />
-				</Button>
-				<h2 className="text-lg font-semibold">{count}</h2>
-				<Button onClick={() => dispatch(UP_ACTION)} radius="xs" size="xs" variant="filled" color="lime">
-					<RiAddLine />
-				</Button>
-			</div>
-		</>
+		<div className="flex items-center justify-center gap-2">
+			<Button onClick={() => dispatch(DOWN_ACTION)} radius="xs" size="xs" variant="filled" color="lime">
+				<RiSubtractLine />
+			</Button>
+			<h2 className="text-lg font-semibold">{count}</h2>
+			<Button onClick={() => dispatch(UP_ACTION)} radius="xs" size="xs" variant="filled" color="lime">
+				<RiAddLine />
+			</Button>
+		</div>
 	)
 }
 
