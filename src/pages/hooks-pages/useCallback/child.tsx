@@ -1,5 +1,5 @@
 import { Button } from '@mantine/core'
-import React, { memo, useEffect, useRef } from 'react'
+import React, { memo } from 'react'
 
 interface IChildComponent {
 	onIncrease?: () => void
@@ -19,4 +19,3 @@ const ChildComponent: React.FC<IChildComponent> = ({ onIncrease }) => {
 }
 
 export default memo(ChildComponent)
-// export default ChildComponent

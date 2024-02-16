@@ -4,12 +4,15 @@ import AppRouterProvider from './components/providers/react-router-provider'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import AppMantineProvider from './components/providers/mantine-provider'
+import { GlobalStateProvider } from './pages/hooks-pages/useContext/advance'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
 	// <React.StrictMode>
 	<AppMantineProvider>
-		<AppRouterProvider />
+		<GlobalStateProvider>
+			<AppRouterProvider />
+		</GlobalStateProvider>
 	</AppMantineProvider>
 	// </React.StrictMode>
 )
