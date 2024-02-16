@@ -16,8 +16,8 @@ function WithContext() {
 		<ThemeContext.Provider value={theme}>
 			<Switch
 				onChange={(e) => setTheme(e.currentTarget.checked)}
-				onLabel={<RiSunLine size={20} />}
-				offLabel={<RiMoonLine size={20} />}
+				onLabel={<RiSunLine size={15} />}
+				offLabel={<RiMoonLine size={15} />}
 				color="lime"
 				defaultChecked
 			/>
