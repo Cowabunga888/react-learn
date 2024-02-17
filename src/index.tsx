@@ -1,18 +1,20 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AppRouterProvider from './components/providers/react-router-provider'
-import './index.css'
-import reportWebVitals from './reportWebVitals'
 import AppMantineProvider from './components/providers/mantine-provider'
-import { GlobalStateProvider } from './pages/hooks-pages/useContext/advance'
+import AppRouterProvider from './components/providers/react-router-provider'
+import reportWebVitals from './reportWebVitals'
+import { AppStoreProvider } from './store/app-store/AppStoreProvider'
+
+import './global.css'
+import '@mantine/core/styles.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+
 root.render(
 	// <React.StrictMode>
 	<AppMantineProvider>
-		<GlobalStateProvider>
+		<AppStoreProvider>
 			<AppRouterProvider />
-		</GlobalStateProvider>
+		</AppStoreProvider>
 	</AppMantineProvider>
 	// </React.StrictMode>
 )

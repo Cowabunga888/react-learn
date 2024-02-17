@@ -1,11 +1,15 @@
-import './App.css'
-import { useGlobalStateContext } from './pages/hooks-pages/useContext/advance'
+import { Outlet } from 'react-router-dom'
+import { useAppStore } from './store/app-store/AppStoreProvider'
 
 function App() {
-	const globalData = useGlobalStateContext()
-	console.log(globalData)
+	const appStoreData = useAppStore()
+	console.log(appStoreData)
 
-	return <div className="App">app</div>
+	return (
+		<>
+			<Outlet />
+		</>
+	)
 }
 
 export default App

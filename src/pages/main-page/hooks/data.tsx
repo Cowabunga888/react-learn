@@ -7,15 +7,15 @@ import {
 	RiCustomerService2Line,
 	RiLoopLeftLine,
 } from '@remixicon/react'
-import UseStatePage from '../../hooks-pages/useState'
-import UseLayoutEffectPage from '../../hooks-pages/useLayoutEffect'
-import UseEffectPage from '../../hooks-pages/useEffect'
-import UseRefPage from '../../hooks-pages/useRef'
-import MemoPage from '../../hooks-pages/memo'
-import UseCallbackPage from '../../hooks-pages/useCallback'
-import UseMemoPage from '../../hooks-pages/useMemo'
-import UseReducerPage from '../../hooks-pages/useReducer'
-import UseContextPage from '../../hooks-pages/useContext'
+import MemoPageView from '../../../views/hooks-pages/memo'
+import UseCallbackPageView from '../../../views/hooks-pages/useCallback'
+import UseContextPageView from '../../../views/hooks-pages/useContext'
+import UseEffectPageView from '../../../views/hooks-pages/useEffect'
+import UseLayoutEffectPageView from '../../../views/hooks-pages/useLayoutEffect'
+import UseMemoPageView from '../../../views/hooks-pages/useMemo'
+import UseReducerPageView from '../../../views/hooks-pages/useReducer'
+import UseRefPageView from '../../../views/hooks-pages/useRef'
+import UseStatePageView from '../../../views/hooks-pages/useState'
 
 function useTabData() {
 	const size = 16
@@ -25,55 +25,55 @@ function useTabData() {
 		{
 			tab_value: 'useState',
 			tab_inner_text: 'UseState',
-			panel: <UseStatePage />,
+			panel: <UseStatePageView />,
 			icon: <RiContrastDropLine size={size} color={color} />,
 		},
 		{
 			tab_value: 'useEffect',
 			tab_inner_text: 'UseEffect',
-			panel: <UseEffectPage />,
+			panel: <UseEffectPageView />,
 			icon: <RiLoopLeftLine size={size} color={color} />,
 		},
 		{
 			tab_value: 'useLayoutEffect',
 			tab_inner_text: 'UseLayoutEffect',
-			panel: <UseLayoutEffectPage />,
+			panel: <UseLayoutEffectPageView />,
 			icon: <RiLoopLeftLine size={size} color={color} />,
 		},
 		{
 			tab_value: 'useRef',
 			tab_inner_text: 'UseRef',
-			panel: <UseRefPage />,
+			panel: <UseRefPageView />,
 			icon: <RiCodeSSlashLine size={size} color={color} />,
 		},
 		{
 			tab_value: 'memo',
 			tab_inner_text: 'Memo',
-			panel: <MemoPage />,
+			panel: <MemoPageView />,
 			icon: <RiBrainLine size={size} color={color} />,
 		},
 		{
 			tab_value: 'useCallback',
 			tab_inner_text: 'UseCallback',
-			panel: <UseCallbackPage />,
+			panel: <UseCallbackPageView />,
 			icon: <RiArrowGoBackLine size={size} color={color} />,
 		},
 		{
 			tab_value: 'useMemo',
 			tab_inner_text: 'UseMemo',
-			panel: <UseMemoPage />,
+			panel: <UseMemoPageView />,
 			icon: <RiBrainFill size={size} color={color} />,
 		},
 		{
 			tab_value: 'useReducer',
 			tab_inner_text: 'UseReducer',
-			panel: <UseReducerPage />,
+			panel: <UseReducerPageView />,
 			icon: <RiContrastDropLine size={size} color={color} />,
 		},
 		{
 			tab_value: 'useContext',
 			tab_inner_text: 'UseContext',
-			panel: <UseContextPage />,
+			panel: <UseContextPageView />,
 			icon: <RiCustomerService2Line size={size} color={color} />,
 		},
 	]
