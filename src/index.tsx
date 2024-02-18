@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client'
 import AppMantineProvider from './components/providers/mantine-provider'
 import AppRouterProvider from './components/providers/react-router-provider'
 import reportWebVitals from './reportWebVitals'
-import { AppStoreProvider } from './store/app-store/AppStoreProvider'
+import { AppStoreProvider } from './store/app-store/app-store-provider'
 
 import './global.css'
 import '@mantine/core/styles.css'

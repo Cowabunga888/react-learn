@@ -1,6 +1,7 @@
 import { Tabs } from '@mantine/core'
 import UseContext from './useContext-comparison'
 import UseContextGeneral from './useContext-general'
+import UseContextWithGlobalState from './context-globalstate'
 
 function UseContextPage() {
 	const tabData = [
@@ -12,9 +13,15 @@ function UseContextPage() {
 		},
 		{
 			tab_value: 'useContext',
-			tab_inner_text: 'UseContext',
+			tab_inner_text: 'useContext',
 			panel: <UseContext />,
 			icon: '2. ',
+		},
+		{
+			tab_value: 'UseContextWithGlobalState',
+			tab_inner_text: 'useContext With GlobalState',
+			panel: <UseContextWithGlobalState />,
+			icon: '3. ',
 		},
 	]
 
