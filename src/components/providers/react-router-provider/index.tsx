@@ -2,6 +2,7 @@ import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from '../../../App'
 import HooksPage from '../../../pages/main-page'
+import NotFound from '../../../views/404'
 
 interface Props {
 	children?: React.ReactNode
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
 				element: <HooksPage />,
 			},
 		],
+	},
+	{
+		path: '*',
+		element: <NotFound />,
 	},
 ])
 

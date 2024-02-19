@@ -16,6 +16,7 @@ import UseMemoPageView from '../../../views/hooks-pages/useMemo'
 import UseReducerPageView from '../../../views/hooks-pages/useReducer'
 import UseRefPageView from '../../../views/hooks-pages/useRef'
 import UseStatePageView from '../../../views/hooks-pages/useState'
+import UseImperativeHandlePageView from '../../../views/hooks-pages/useImperativeHandle'
 
 function useTabData() {
 	const size = 16
@@ -74,6 +75,12 @@ function useTabData() {
 			tab_value: 'useContext',
 			tab_inner_text: 'UseContext',
 			panel: <UseContextPageView />,
+			icon: <RiCustomerService2Line size={size} color={color} />,
+		},
+		{
+			tab_value: 'useImperativeHandle',
+			tab_inner_text: 'UseImperativeHandle',
+			panel: <UseImperativeHandlePageView />,
 			icon: <RiCustomerService2Line size={size} color={color} />,
 		},
 	]
