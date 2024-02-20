@@ -1,8 +1,5 @@
 import React from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import App from '../../../App'
-import HooksPage from '../../../pages/main-page'
-import NotFound from '../../../views/404'
+import { RouterProvider } from 'react-router-dom'
 import useAppRouters from './useAppRouters'
 
 interface Props {

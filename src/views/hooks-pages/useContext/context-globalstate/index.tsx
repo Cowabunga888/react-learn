@@ -1,8 +1,8 @@
 import { Input } from '@mantine/core'
 import { RiCloseLine } from '@remixicon/react'
 import { ChangeEvent, KeyboardEvent } from 'react'
-import { useAppStore } from '../../../../store/app-store/app-store-provider'
-import { ActionTypes, ITodo } from '../../../../store/app-store/store-type'
+import { useAppStore } from '../../../../store/context-app-store/app-store-provider'
+import { ActionTypes, ITodo } from '../../../../store/context-app-store/store-type'
 
 function UseContextWithGlobalState() {
 	const { state, dispatch } = useAppStore()
