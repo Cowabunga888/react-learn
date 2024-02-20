@@ -1,10 +1,22 @@
-import React, { useImperativeHandle } from 'react'
+import { Button } from '@mantine/core'
+import { useRef } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
+import VideoComponent from './VideoComponent'
 
 function UseImperativeHandlePageView() {
-	// useImperativeHandle()
+	const videoRef = useRef<HTMLVideoElement>(null)
+
 	return (
-		<div>
+		<>
+			<VideoComponent ref={videoRef} />
+			<div className="flex gap-3 mt-2">
+				<Button onClick={() => videoRef.current?.play()} radius="xs" size="xs" variant="filled" color="lime">
+					Play
+				</Button>
+				<Button onClick={() => videoRef.current?.pause()} radius="xs" size="xs" variant="filled" color="lime">
+					Pause
+				</Button>
+			</div>
 			<AppBlockQuote>
 				<p className="text-red-400">## useImperativeHandle</p>
 				<p>Giúp tùy chỉnh ref của Function Component</p>
@@ -19,7 +31,7 @@ function UseImperativeHandlePageView() {
 					đó
 				</p>
 			</AppBlockQuote>
-		</div>
+		</>
 	)
 }
 

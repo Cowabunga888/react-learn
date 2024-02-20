@@ -3,7 +3,7 @@ import { RiReactjsLine } from '@remixicon/react'
 import { Outlet } from 'react-router-dom'
 import useTabData from './hooks/data'
 
-function MainPage() {
+function HooksPage() {
 	const { data: tabData } = useTabData()
 
 	return (
@@ -35,4 +35,4 @@ function MainPage() {
 	)
 }
 
-export default MainPage
+export default HooksPage
