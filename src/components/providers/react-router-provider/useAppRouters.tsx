@@ -1,8 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../../../App'
-import HooksPage from '../../../pages/main-page'
-import NotFound from '../../../views/404'
 import { AppConfig } from '../../../app-config'
+import NotFoundPage from '../../../pages/404'
+import HooksPage from '../../../pages/hooks-page'
+import ReduxPage from '../../../pages/redux-page'
+import ReduxGeneralPage from '../../../pages/redux-page/general'
+import ReduxBasicUsage from '../../../pages/redux-page/basic-usage'
 
 function useAppRouters() {
 	const routerObject = createBrowserRouter([
@@ -18,15 +21,33 @@ function useAppRouters() {
 					path: AppConfig.router.hooks.path,
 					element: <HooksPage />,
 				},
+				{
+					path: AppConfig.router.redux.path,
+					element: <ReduxPage />,
+					children: [
+						{
+							path: '',
+							element: <ReduxGeneralPage />,
+						},
+						{
+							path: AppConfig.router.redux.children.basic.path,
+							element: <ReduxBasicUsage />,
+						},
+						{
+							path: AppConfig.router.redux.children.advance.path,
+							element: <ReduxBasicUsage />,
+						},
+					],
+				},
 			],
 		},
 		{
 			path: '*',
-			element: <NotFound />,
+			element: <NotFoundPage />,
 		},
 		{
 			path: AppConfig.router.notFound.path,
-			element: <NotFound />,
+			element: <NotFoundPage />,
 		},
 	])
 

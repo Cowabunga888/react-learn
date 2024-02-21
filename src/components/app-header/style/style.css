@@ -1,5 +1,5 @@
 .app-header{
-  @apply w-full h-10 flex items-center px-2;
+  @apply w-full h-10 flex items-center px-2 shadow-md;
 }
 
 .app-header__nav-container{

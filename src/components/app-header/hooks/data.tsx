@@ -1,4 +1,4 @@
-import { RiHomeFill, RiReactjsFill } from '@remixicon/react'
+import { RiHomeFill, RiReactjsFill, RiReactjsLine } from '@remixicon/react'
 import { AppConfig } from '../../../app-config'
 
 function useNavData() {
@@ -12,6 +12,11 @@ function useNavData() {
 			path: AppConfig.router.hooks.path,
 			icon: <RiReactjsFill />,
 			innerText: AppConfig.router.hooks.innerText,
+		},
+		{
+			path: AppConfig.router.redux.path,
+			icon: <RiReactjsLine />,
+			innerText: AppConfig.router.redux.innerText,
 		},
 	]
 }

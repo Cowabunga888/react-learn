@@ -1,0 +1,11 @@
+import React from 'react'
+
+interface IAppBody {
+	children: React.ReactNode
+}
+
+function AppBody({ children }: IAppBody) {
+	return <div>{children}</div>
+}
+
+export default AppBody

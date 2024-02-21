@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import useNavData from './hooks/data'
 import './style/style.css'
+import { AppConfig } from '../../app-config'
 
 function AppHeader() {
 	const navData = useNavData()
