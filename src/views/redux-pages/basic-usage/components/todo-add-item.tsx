@@ -1,4 +1,4 @@
-import { Button, Input, MultiSelect } from '@mantine/core'
+import { Button, Input, Select } from '@mantine/core'
 
 function TodoAddItem() {
 	const selectData = [
@@ -9,7 +9,7 @@ function TodoAddItem() {
 	return (
 		<div className="flex items-center justify-center gap-2 w-full">
 			<Input radius="xs" placeholder="Add todo..." className="w-full" />
-			<MultiSelect radius="xs" placeholder="Pick value" data={selectData} w={200} />
+			<Select radius="xs" placeholder="Pick value" data={selectData} w={200} />
 			<Button radius="xs" variant="filled" color="lime" className="flex-shrink-0">
 				Add
 			</Button>

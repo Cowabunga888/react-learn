@@ -8,7 +8,7 @@ import './style.css'
 
 function ReduxBasicUsage() {
 	return (
-		<div>
+		<div className="bg-gray-400 py-3">
 			<div className="todo-form">
 				<h2 className="todo-header">Todo app</h2>
 

@@ -1,4 +1,4 @@
-import { MultiSelect } from '@mantine/core'
+import { Select } from '@mantine/core'
 
 function TodoPrioritySelect() {
 	const selectData = [
@@ -10,7 +10,7 @@ function TodoPrioritySelect() {
 	return (
 		<div>
 			<p className="todo-label">Pick priority</p>
-			<MultiSelect radius="xs" placeholder="Pick value" data={selectData} />
+			<Select radius="xs" placeholder="Pick value" data={selectData} />
 		</div>
 	)
 }

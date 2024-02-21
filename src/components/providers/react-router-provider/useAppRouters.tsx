@@ -4,8 +4,8 @@ import { AppConfig } from '../../../app-config'
 import NotFoundPage from '../../../pages/404'
 import HooksPage from '../../../pages/hooks-page'
 import ReduxPage from '../../../pages/redux-page'
-import ReduxGeneralPage from '../../../pages/redux-page/general'
-import ReduxBasicUsage from '../../../pages/redux-page/basic-usage'
+import ReduxBasicUsage from '../../../views/redux-pages/basic-usage'
+import ReduxGeneralPage from '../../../views/redux-pages/general'
 
 function useAppRouters() {
 	const routerObject = createBrowserRouter([

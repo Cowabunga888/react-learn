@@ -18,8 +18,7 @@ const TodoItem = () => {
 	return (
 		<div className="flex items-center justify-between">
 			<div className="flex gap-2 items-center cursor-pointer">
-				<Checkbox color="lime" />
-				<span>Todo 01</span>
+				<Checkbox color="lime" label="Todo 01" labelPosition="right" />
 				<span className={todoColorSpot('low')} />
 			</div>
 			<button type="button">
