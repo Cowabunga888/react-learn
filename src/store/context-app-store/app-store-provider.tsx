@@ -14,10 +14,10 @@ const useAppStore = () => {
 	return context
 }
 
-function AppStoreProvider({ children }: IAppStore) {
+function AppContextStoreProvider({ children }: IAppStore) {
 	const [state, dispatch] = useReducer(globalStateHanlder, initialGlobalState)
 
 	return <AppStoreContext.Provider value={{ state, dispatch }}>{children}</AppStoreContext.Provider>
 }
 
-export { AppStoreProvider, useAppStore }
+export { AppContextStoreProvider, useAppStore }

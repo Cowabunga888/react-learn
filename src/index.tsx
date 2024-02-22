@@ -2,7 +2,8 @@ import ReactDOM from 'react-dom/client'
 import AppMantineProvider from './components/providers/mantine-provider'
 import AppRouterProvider from './components/providers/react-router-provider'
 import reportWebVitals from './reportWebVitals'
-import { AppStoreProvider } from './store/context-app-store/app-store-provider'
+import { AppContextStoreProvider } from './store/context-app-store/app-store-provider'
+import AppReduxStoreProvider from './components/providers/app-redux-store-provider'
 
 import './global.css'
 import '@mantine/core/styles.css'
@@ -12,9 +13,11 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
 	// <React.StrictMode>
 	<AppMantineProvider>
-		<AppStoreProvider>
-			<AppRouterProvider />
-		</AppStoreProvider>
+		<AppReduxStoreProvider>
+			<AppContextStoreProvider>
+				<AppRouterProvider />
+			</AppContextStoreProvider>
+		</AppReduxStoreProvider>
 	</AppMantineProvider>
 	// </React.StrictMode>
 )

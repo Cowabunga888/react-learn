@@ -5,7 +5,7 @@ interface Props {
 	children: React.ReactNode
 }
 
-function AppMantineProvider({ children }: Props) {
+function AppMantineProvider({ children }: Readonly<Props>) {
 	return <MantineProvider>{children}</MantineProvider>
 }
 

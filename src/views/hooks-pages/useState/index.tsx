@@ -27,6 +27,7 @@ function UseStatePage() {
 				<Button onClick={handleClickDecrease} radius="xs" size="xs" variant="filled" color="lime">
 					<RiSubtractLine />
 				</Button>
+
 				<h2 className="text-lg font-semibold">{counter}</h2>
 				<Button onClick={handleClickIncrease} radius="xs" size="xs" variant="filled" color="lime">
 					<RiAddLine />
