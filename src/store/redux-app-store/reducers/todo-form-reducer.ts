@@ -1,5 +1,5 @@
 import { PayloadAction } from '@reduxjs/toolkit'
-import { ITodoFormState } from '../types/type'
+import { ITodoFormState, ITodoItem } from '../types/todo-form-type'
 
 const todoFormReducer = {
 	todoInputOnchange: (state: ITodoFormState, action: PayloadAction<string>) => {
@@ -12,6 +12,18 @@ const todoFormReducer = {
 		return {
 			...state,
 			todoInput: action.payload,
+		}
+	},
+	todoAddTodo: (state: ITodoFormState, action: PayloadAction<ITodoItem>) => {
+		return {
+			...state,
+			todoList: [...state.todoList, action.payload],
+		}
+	},
+	todoDeleteTodo: (state: ITodoFormState, action: PayloadAction<{ id: string }>) => {
+		return {
+			...state,
+			todoList: state.todoList.filter((todo) => todo.id !== action.payload.id),
 		}
 	},
 	todoMarkItemAsDone: (state: ITodoFormState, action: PayloadAction<{ id: string }>) => {

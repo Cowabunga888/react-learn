@@ -1,8 +1,8 @@
 import { Button, Input, Select } from '@mantine/core'
 import { ChangeEvent, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../../store/redux-app-store/hooks'
-import { todoAddInputOnchange } from '../../../../store/redux-app-store/slices/todo-form-slice'
-import { TODO_PRIOTITY } from '../../../../store/redux-app-store/types/type'
+import { todoAddInputOnchange, todoAddTodo } from '../../../../store/redux-app-store/slices/todo-form-slice'
+import { ITodoItem, TODO_PRIOTITY } from '../../../../store/redux-app-store/types/todo-form-type'
 import { nanoid } from 'nanoid'
 
 function TodoAddItem() {
@@ -14,21 +14,25 @@ function TodoAddItem() {
 	const [priority, setPriority] = useState<string | null>(defaultPriority)
 
 	const handleAddInputOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-		const action = e.target.value
-		todoDispatch(todoAddInputOnchange(action))
+		const inputValue = e.target.value
+		todoDispatch(todoAddInputOnchange(inputValue))
 	}
 
 	const handleAddButtonClick = () => {
-		const todo = {
-			id: nanoid(),
-			label: todoState.todoInput,
-			priority: {
-				value: priority,
-				label: priority,
-			},
-			status: false,
+		if (todoState.todoInput !== '') {
+			const todo: ITodoItem = {
+				id: nanoid(),
+				label: todoState.todoInput,
+				priority: {
+					value: priority ?? defaultPriority,
+					label: priority ?? defaultPriority,
+				},
+				status: false,
+			}
+			todoDispatch(todoAddTodo(todo))
+			todoDispatch(todoAddInputOnchange(''))
+			setPriority(defaultPriority)
 		}
-		console.log(todo)
 	}
 
 	return (
@@ -44,12 +48,10 @@ function TodoAddItem() {
 				radius="xs"
 				placeholder="Pick value"
 				data={selectData}
-				defaultValue={defaultPriority}
+				value={priority}
 				w={200}
 				checkIconPosition="right"
-				onChange={(e) => {
-					setPriority(e)
-				}}
+				onChange={setPriority}
 			/>
 			<Button onClick={handleAddButtonClick} radius="xs" variant="filled" color="lime" className="flex-shrink-0">
 				Add

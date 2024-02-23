@@ -1,9 +1,8 @@
 import { Checkbox } from '@mantine/core'
 import { RiCloseLine } from '@remixicon/react'
-import { ITodoItem } from '../../../../store/redux-app-store/types/type'
-import { useState } from 'react'
 import { useAppDispatch } from '../../../../store/redux-app-store/hooks'
-import { todoMarkItemAsDone } from '../../../../store/redux-app-store/slices/todo-form-slice'
+import { todoDeleteTodo, todoMarkItemAsDone } from '../../../../store/redux-app-store/slices/todo-form-slice'
+import { ITodoItem, TODO_PRIOTITY } from '../../../../store/redux-app-store/types/todo-form-type'
 
 interface ITodoItemProps {
 	todo: ITodoItem
@@ -17,16 +16,20 @@ const TodoItem = ({ todo }: ITodoItemProps) => {
 		dispatch(todoMarkItemAsDone({ id: todo.id }))
 	}
 
+	const handleDeleteTodo = () => {
+		dispatch(todoDeleteTodo({ id: todo.id }))
+	}
+
 	const todoColorSpot = (todoPriority: string) => {
 		switch (todoPriority) {
-			case 'hight':
-				return 'w-4 h-4 rounded-sm bg-red-300'
-			case 'medium':
-				return 'w-4 h-4 rounded-sm bg-yellow-300'
-			case 'low':
-				return 'w-4 h-4 rounded-sm bg-green-300'
+			case TODO_PRIOTITY.HIGHT:
+				return 'bg-red-300'
+			case TODO_PRIOTITY.MEDIUM:
+				return 'bg-yellow-300'
+			case TODO_PRIOTITY.LOW:
+				return 'bg-green-300'
 			default:
-				return 'w-4 h-4 rounded-sm bg-red-300'
+				return 'bg-yellow-300'
 		}
 	}
 
@@ -43,9 +46,9 @@ const TodoItem = ({ todo }: ITodoItemProps) => {
 						body: `flex flex-row-reverse gap-2 ${todo.status && 'line-through text-[#999] italic'}`,
 					}}
 				/>
-				<span className={todoColorSpot(todo.priority.value)} />
+				<span className={`w-4 h-4 rounded-sm  ${todoColorSpot(todo.priority.value)}`} />
 			</button>
-			<button type="button">
+			<button type="button" onClick={handleDeleteTodo}>
 				<RiCloseLine className="hover:text-red-400" />
 			</button>
 		</div>
