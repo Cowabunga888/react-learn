@@ -3,7 +3,7 @@ import { RiAddLine } from '@remixicon/react'
 import { useLayoutEffect, useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 
-function UseLayoutEffectPage() {
+function UseLayoutEffectPageView() {
 	const [count, setCount] = useState<number>(0)
 
 	// useEffect(() => {
@@ -50,4 +50,4 @@ function UseLayoutEffectPage() {
 	)
 }
 
-export default UseLayoutEffectPage
+export default UseLayoutEffectPageView

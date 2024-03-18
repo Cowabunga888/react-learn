@@ -3,7 +3,7 @@ import { useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 import ChildComponent from './child'
 
-function MemoPage() {
+function MemoPageView() {
 	const [count1, setCount1] = useState<number>(0)
 	const [count2, setCount2] = useState<number>(0)
 
@@ -47,4 +47,4 @@ function MemoPage() {
 	)
 }
 
-export default MemoPage
+export default MemoPageView

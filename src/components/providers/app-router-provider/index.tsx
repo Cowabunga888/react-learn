@@ -6,7 +6,7 @@ interface Props {
 	children?: React.ReactNode
 }
 
-function AppRouterProvider({ children }: Props) {
+function AppRouterProvider({ children }: Readonly<Props>) {
 	const router = useAppRouters()
 	return (
 		<>

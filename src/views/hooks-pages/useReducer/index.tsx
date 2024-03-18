@@ -3,7 +3,7 @@ import UseReducerGeneral from './useReducer-general'
 import UseReducerEX from './useReducer-ex'
 import UseReducerTodoList from './advance/todo-app/useReducer-todo'
 
-function UseReducerPage() {
+function UseReducerPageView() {
 	const tabData = [
 		{
 			tab_value: 'useReducer-general',
@@ -47,4 +47,4 @@ function UseReducerPage() {
 	)
 }
 
-export default UseReducerPage
+export default UseReducerPageView

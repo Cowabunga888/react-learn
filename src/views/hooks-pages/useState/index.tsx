@@ -3,7 +3,7 @@ import { RiAddLine, RiSubtractLine } from '@remixicon/react'
 import { useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 
-function UseStatePage() {
+function UseStatePageView() {
 	const [counter, setCounter] = useState<number>(1)
 
 	// hoặc có thể dùng callback để truyền vào để làm innitialState
@@ -43,4 +43,4 @@ function UseStatePage() {
 	)
 }
 
-export default UseStatePage
+export default UseStatePageView

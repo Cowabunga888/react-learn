@@ -4,7 +4,7 @@ interface IAppBody {
 	children: React.ReactNode
 }
 
-function AppBody({ children }: IAppBody) {
+function AppBody({ children }: Readonly<IAppBody>) {
 	return <div>{children}</div>
 }
 

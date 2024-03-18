@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 import ChildComponent from './child'
 
-function UseCallbackPage() {
+function UseCallbackPageView() {
 	const [count1, setCount1] = useState<number>(0)
 
 	// hàm sẽ được tạo mới khi component parent rerender
@@ -50,4 +50,4 @@ function UseCallbackPage() {
 	)
 }
 
-export default UseCallbackPage
+export default UseCallbackPageView

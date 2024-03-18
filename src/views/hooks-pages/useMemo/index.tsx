@@ -2,7 +2,7 @@ import { Button, Input } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
 
-function UseMemoPage() {
+function UseMemoPageView() {
 	const [name, setName] = useState<string>('')
 	const [price, setPrice] = useState<string>('')
 	const [product, setProduct] = useState<{ name: string; price: number }[]>([])
@@ -80,4 +80,4 @@ function UseMemoPage() {
 	)
 }
 
-export default UseMemoPage
+export default UseMemoPageView

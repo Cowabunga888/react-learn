@@ -1,23 +1,29 @@
 import ReactDOM from 'react-dom/client'
 import AppMantineProvider from './components/providers/mantine-provider'
-import AppRouterProvider from './components/providers/react-router-provider'
+import AppRouterProvider from './components/providers/app-router-provider'
 import reportWebVitals from './reportWebVitals'
 import { AppContextStoreProvider } from './store/context-app-store/app-store-provider'
 import AppReduxStoreProvider from './components/providers/app-redux-store-provider'
 
 import './global.css'
 import '@mantine/core/styles.css'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const queryClient = new QueryClient()
 
 root.render(
 	// <React.StrictMode>
 	<AppMantineProvider>
-		<AppReduxStoreProvider>
-			<AppContextStoreProvider>
-				<AppRouterProvider />
-			</AppContextStoreProvider>
-		</AppReduxStoreProvider>
+		<QueryClientProvider client={queryClient}>
+			<AppReduxStoreProvider>
+				<AppContextStoreProvider>
+					<AppRouterProvider />
+				</AppContextStoreProvider>
+			</AppReduxStoreProvider>
+			<ReactQueryDevtools initialIsOpen={false} />
+		</QueryClientProvider>
 	</AppMantineProvider>
 	// </React.StrictMode>
 )

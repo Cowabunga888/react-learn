@@ -4,7 +4,7 @@ import AppBlockQuote from '../../../components/block-quotes'
 
 //let timerIntervalFunc: any
 
-function UseRefPage() {
+function UseRefPageView() {
 	const [count, setCount] = useState<number>(60)
 	const timerIntervalFunc = useRef<any>()
 	const prevCount = useRef<number>()
@@ -71,4 +71,4 @@ function UseRefPage() {
 	)
 }
 
-export default UseRefPage
+export default UseRefPageView

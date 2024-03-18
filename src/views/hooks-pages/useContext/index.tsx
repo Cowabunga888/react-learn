@@ -3,7 +3,7 @@ import UseContext from './useContext-comparison'
 import UseContextGeneral from './useContext-general'
 import UseContextWithGlobalState from './context-globalstate'
 
-function UseContextPage() {
+function UseContextPageView() {
 	const tabData = [
 		{
 			tab_value: 'useContext-general',
@@ -48,4 +48,4 @@ function UseContextPage() {
 	)
 }
 
-export default UseContextPage
+export default UseContextPageView

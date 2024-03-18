@@ -7,7 +7,7 @@ import UseEffectDOMEvent from './advance/useEffect-DOM-event'
 import UseEffectTimeoutFunc from './advance/useEffect-timeout-func'
 import UseEffectUploadImg from './advance/useEffect-upload-img'
 
-function UseEffectPage() {
+function UseEffectPageView() {
 	const tabData = [
 		{
 			tab_value: 'useEffect-general',
@@ -76,4 +76,4 @@ function UseEffectPage() {
 	)
 }
 
-export default UseEffectPage
+export default UseEffectPageView
