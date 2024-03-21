@@ -14,7 +14,7 @@ const useAppStore = () => {
 	return context
 }
 
-function AppContextStoreProvider({ children }: IAppStore) {
+function AppContextStoreProvider({ children }: Readonly<IAppStore>) {
 	const [state, dispatch] = useReducer(globalStateHanlder, initialGlobalState)
 
 	return <AppStoreContext.Provider value={{ state, dispatch }}>{children}</AppStoreContext.Provider>

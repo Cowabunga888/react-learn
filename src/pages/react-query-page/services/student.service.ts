@@ -1,9 +1,9 @@
 import http from '../../../utils/http'
-import { IGetStudentsParams, IGetStudentsPayload } from '../type'
+import { IGetStudentsTableParams, IGetStudentsTablePayload } from '../type'
 
 const studentsService = {
-	getStudents: async ({ page, perPage }: IGetStudentsParams) => {
-		const res: IGetStudentsPayload = await http.get('/students', {
+	getStudents: async ({ page, perPage }: IGetStudentsTableParams) => {
+		const res: IGetStudentsTablePayload = await http.get('/students', {
 			params: { _page: page, _per_page: perPage },
 		})
 

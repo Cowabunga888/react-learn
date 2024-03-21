@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { studentsService } from '../../../pages/react-query-page/services'
-import { IStudent } from '../../../pages/react-query-page/type'
+import { IStudentTable } from '../../../pages/react-query-page/type'
 import StudentListItem from '../../../pages/react-query-page/components/student-list-item'
 import { Loader, ScrollArea } from '@mantine/core'
 
 function BasicApiFetchingView() {
 	// 1. create state
-	const [students, setStudents] = useState<IStudent[]>([])
+	const [students, setStudents] = useState<IStudentTable[]>([])
 	const [isLoading, setIsLoading] = useState<boolean>(false)
 
 	// 2. create async function
@@ -35,6 +35,10 @@ function BasicApiFetchingView() {
 						{students.map((st) => {
 							return <StudentListItem data={st} key={st.id} />
 						})}
+
+						<div className="w-full flex justify-center">
+							<Loader color="lime" m={'auto'} size={'sm'} />
+						</div>
 					</ScrollArea>
 				)}
 			</div>

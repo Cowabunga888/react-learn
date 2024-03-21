@@ -1,13 +1,13 @@
 import { RiDeleteBinLine } from '@remixicon/react'
-import { IStudent } from '../../type'
+import { IStudentTable } from '../../type'
 
 interface IStudentListItem {
-	data: IStudent
+	data: IStudentTable
 }
 
 function StudentListItem({ data }: Readonly<IStudentListItem>) {
 	return (
-		<div className="flex gap-2 mb-3 w-full text-sm border-b last:border-none">
+		<div className="flex gap-2 mb-3 pb-3 w-full text-sm border-b last:border-none">
 			<img
 				src={data.avatar}
 				alt="avt"

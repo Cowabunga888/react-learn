@@ -1,1 +1,2 @@
-export * from './useGetStudentsPerpage'
+export * from './useGetStudentsList'
+export * from './useGetStudentsTable'

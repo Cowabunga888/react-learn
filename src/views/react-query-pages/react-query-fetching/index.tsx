@@ -1,23 +1,25 @@
-import { Loader, ScrollArea } from '@mantine/core'
-import StudentListItem from '../../../pages/react-query-page/components/student-list-item'
-import { useGetStudentsPerpage } from '../../../pages/react-query-page/hooks'
+import { Tabs } from '@mantine/core'
+import { useState } from 'react'
+import ReactQueryInfiniteListFetching from './fetching-infinite-list'
+import ReactQueryTableFetching from './fetching-table'
 
 function ReactQueryFetchingView() {
-	const { data: students, isLoading } = useGetStudentsPerpage({ page: 1, perPage: 100 })
+	const [activeTab, setActiveTab] = useState<string | null>('first')
 
 	return (
-		<div className="w-full flex items-center justify-center">
-			<div className="w-[400px] p-3 border rounded-md flex flex-col gap-3">
-				{isLoading && <Loader color="lime" m={'auto'} />}
-				{!isLoading && (
-					<ScrollArea h={500} offsetScrollbars scrollbarSize={4} p={10}>
-						{students?.data.map((st) => {
-							return <StudentListItem data={st} key={st.id} />
-						})}
-					</ScrollArea>
-				)}
-			</div>
-		</div>
+		<Tabs variant="outline" value={activeTab} onChange={setActiveTab}>
+			<Tabs.List>
+				<Tabs.Tab value="first">Table fetching</Tabs.Tab>
+				<Tabs.Tab value="second">Infinite fetching</Tabs.Tab>
+			</Tabs.List>
+
+			<Tabs.Panel value="first">
+				<ReactQueryTableFetching />
+			</Tabs.Panel>
+			<Tabs.Panel value="second">
+				<ReactQueryInfiniteListFetching />
+			</Tabs.Panel>
+		</Tabs>
 	)
 }
 
