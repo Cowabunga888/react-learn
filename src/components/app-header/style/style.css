@@ -1,0 +1,7 @@
+.app-header{
+  @apply w-full h-10 flex items-center px-2 shadow-md;
+}
+
+.app-header__nav-container{
+  @apply flex items-start justify-center gap-3 text-[#788AEB];
+}

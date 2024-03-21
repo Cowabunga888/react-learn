@@ -1,13 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Outlet } from 'react-router-dom'
+import AppBody from './components/app-body'
+import AppFooter from './components/app-footer'
+import AppHeader from './components/app-header'
 
 function App() {
-  return (
-    <div className="App">
-      app
-    </div>
-  );
+	return (
+		<>
+			<AppHeader />
+			<AppBody>
+				<Outlet />
+			</AppBody>
+			<AppFooter />
+		</>
+	)
 }
 
-export default App;
+export default App

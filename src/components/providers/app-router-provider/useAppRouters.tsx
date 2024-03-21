@@ -1,0 +1,134 @@
+import { createBrowserRouter } from 'react-router-dom'
+import App from '../../../App'
+import { AppConfig } from '../../../app-config'
+import NotFoundPage from '../../../pages/404'
+import HooksPage from '../../../pages/hooks-page'
+import ReactQueryPage from '../../../pages/react-query-page'
+import ReduxPage from '../../../pages/redux-page'
+import MemoPageView from '../../../views/hooks-pages/memo'
+import UseCallbackPageView from '../../../views/hooks-pages/useCallback'
+import UseContextPageView from '../../../views/hooks-pages/useContext'
+import UseEffectPageView from '../../../views/hooks-pages/useEffect'
+import UseImperativeHandlePageView from '../../../views/hooks-pages/useImperativeHandle'
+import UseLayoutEffectPageView from '../../../views/hooks-pages/useLayoutEffect'
+import UseMemoPageView from '../../../views/hooks-pages/useMemo'
+import UseReducerPageView from '../../../views/hooks-pages/useReducer'
+import UseRefPageView from '../../../views/hooks-pages/useRef'
+import UseStatePageView from '../../../views/hooks-pages/useState'
+import ReduxBasicUsage from '../../../views/redux-pages/basic-usage'
+import ReduxGeneralPage from '../../../views/redux-pages/general'
+import BasicApiFetchingView from '../../../views/react-query-pages/basic-api-fetching'
+import ReactQueryFetchingView from '../../../views/react-query-pages/react-query-fetching'
+
+function useAppRouters() {
+	const routerObject = createBrowserRouter([
+		{
+			path: AppConfig.router.root.path,
+			element: <App />,
+			children: [
+				{
+					path: '',
+					element: <div>app body</div>,
+				},
+				{
+					path: AppConfig.router.hooks.path,
+					element: <HooksPage />,
+					children: [
+						{
+							path: '',
+							element: <UseStatePageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useState.path,
+							element: <UseStatePageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useEffect.path,
+							element: <UseEffectPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useLayoutEffect.path,
+							element: <UseLayoutEffectPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useRef.path,
+							element: <UseRefPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.Memo.path,
+							element: <MemoPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useCallBack.path,
+							element: <UseCallbackPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useMemo.path,
+							element: <UseMemoPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useReducer.path,
+							element: <UseReducerPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useContext.path,
+							element: <UseContextPageView />,
+						},
+						{
+							path: AppConfig.router.hooks.children.useImperativeHandle.path,
+							element: <UseImperativeHandlePageView />,
+						},
+					],
+				},
+				{
+					path: AppConfig.router.redux.path,
+					element: <ReduxPage />,
+					children: [
+						{
+							path: '',
+							element: <ReduxGeneralPage />,
+						},
+						{
+							path: AppConfig.router.redux.children.basic.path,
+							element: <ReduxBasicUsage />,
+						},
+						{
+							path: AppConfig.router.redux.children.advance.path,
+							element: <ReduxBasicUsage />,
+						},
+					],
+				},
+				{
+					path: AppConfig.router.reactQuery.path,
+					element: <ReactQueryPage />,
+					children: [
+						{
+							path: '',
+							element: <BasicApiFetchingView />,
+						},
+						{
+							path: AppConfig.router.reactQuery.children.basic.path,
+							element: <BasicApiFetchingView />,
+						},
+						{
+							path: AppConfig.router.reactQuery.children.queryFetching.path,
+							element: <ReactQueryFetchingView />,
+						},
+					],
+				},
+			],
+		},
+		{
+			path: '*',
+			element: <NotFoundPage />,
+		},
+		{
+			path: AppConfig.router.notFound.path,
+			element: <NotFoundPage />,
+		},
+	])
+
+	return routerObject
+}
+
+export default useAppRouters

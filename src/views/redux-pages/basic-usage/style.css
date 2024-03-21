@@ -1,0 +1,10 @@
+.todo-form{
+  @apply w-[450px] p-3 m-auto bg-white text-[#333] rounded-md flex flex-col gap-6;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.todo-header{
+  @apply text-2xl text-center font-semibold;
+}
+.todo-label{
+  @apply text-sm font-semibold italic;
+}
