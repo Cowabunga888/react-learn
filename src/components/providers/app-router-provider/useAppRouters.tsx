@@ -4,6 +4,8 @@ import { AppConfig } from '../../../app-config'
 import NotFoundPage from '../../../pages/404'
 import HooksPage from '../../../pages/hooks-page'
 import ReactQueryPage from '../../../pages/react-query-page'
+import BasicApiFetchingPage from '../../../pages/react-query-page/pages/basic-api-fetching'
+import ReactQueryApiFetchingPage from '../../../pages/react-query-page/pages/react-query-fetching'
 import ReduxPage from '../../../pages/redux-page'
 import MemoPageView from '../../../views/hooks-pages/memo'
 import UseCallbackPageView from '../../../views/hooks-pages/useCallback'
@@ -17,8 +19,6 @@ import UseRefPageView from '../../../views/hooks-pages/useRef'
 import UseStatePageView from '../../../views/hooks-pages/useState'
 import ReduxBasicUsage from '../../../views/redux-pages/basic-usage'
 import ReduxGeneralPage from '../../../views/redux-pages/general'
-import BasicApiFetchingView from '../../../views/react-query-pages/basic-api-fetching'
-import ReactQueryFetchingView from '../../../views/react-query-pages/react-query-fetching'
 
 function useAppRouters() {
 	const routerObject = createBrowserRouter([
@@ -104,15 +104,15 @@ function useAppRouters() {
 					children: [
 						{
 							path: '',
-							element: <BasicApiFetchingView />,
+							element: <BasicApiFetchingPage />,
 						},
 						{
 							path: AppConfig.router.reactQuery.children.basic.path,
-							element: <BasicApiFetchingView />,
+							element: <BasicApiFetchingPage />,
 						},
 						{
 							path: AppConfig.router.reactQuery.children.queryFetching.path,
-							element: <ReactQueryFetchingView />,
+							element: <ReactQueryApiFetchingPage />,
 						},
 					],
 				},
