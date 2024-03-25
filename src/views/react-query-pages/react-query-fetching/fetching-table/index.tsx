@@ -1,10 +1,32 @@
-import { Loader, Pagination, ScrollArea, Table } from '@mantine/core'
-import { useState } from 'react'
+import { ActionIcon, Button, Loader, Modal, Pagination, ScrollArea, Table } from '@mantine/core'
+import { RiUserAddLine, RiUserSettingsLine, RiUserUnfollowLine } from '@remixicon/react'
+import { useRef, useState } from 'react'
 import { useGetStudentsTable } from '../../../../pages/react-query-page/hooks'
+import { useDisclosure } from '@mantine/hooks'
+import UpSertModalBody from '../../components/upsert-modal-body'
+import { IStudentList, IStudentTable } from '../../../../pages/react-query-page/type'
 
 function ReactQueryTableFetching() {
+	enum modalType {
+		UPDATE_STUDENT = 'UPDATE_STUDENT',
+		ADD_STUDENT = 'ADD_STUDENT',
+	}
+	const [opened, { open, close }] = useDisclosure(false)
 	const [activePage, setActivePage] = useState<number>(1)
 	const { data: students, isLoading } = useGetStudentsTable({ page: activePage, perPage: 10 })
+
+	const modalRef = useRef<string>(modalType.UPDATE_STUDENT)
+	const studentRef = useRef<IStudentTable | IStudentList | null>(null)
+
+	const openModal = (type: modalType, st?: IStudentTable | IStudentList | null) => {
+		modalRef.current = type
+		if (st && type === modalType.UPDATE_STUDENT) {
+			studentRef.current = st
+		} else {
+			studentRef.current = null
+		}
+		open()
+	}
 
 	const rows = students?.data.map((st) => (
 		<Table.Tr key={st.id}>
@@ -17,6 +39,14 @@ function ReactQueryTableFetching() {
 			<Table.Td>{st.country}</Table.Td>
 			<Table.Td>{st.email}</Table.Td>
 			<Table.Td>{st.gender}</Table.Td>
+			<Table.Td>
+				<button type="button" onClick={() => openModal(modalType.UPDATE_STUDENT, st)} className="p-1">
+					<RiUserSettingsLine size={20} className="text-gray-200 hover:text-yellow-500" />
+				</button>
+				<button type="button" className="p-1">
+					<RiUserUnfollowLine size={20} className="text-gray-200 hover:text-red-500" />
+				</button>
+			</Table.Td>
 		</Table.Tr>
 	))
 
@@ -37,6 +67,11 @@ function ReactQueryTableFetching() {
 							<Table.Th>country</Table.Th>
 							<Table.Th>email</Table.Th>
 							<Table.Th>gender</Table.Th>
+							<Table.Th>
+								<ActionIcon color="lime">
+									<RiUserAddLine onClick={() => openModal(modalType.ADD_STUDENT)} size={18} />
+								</ActionIcon>
+							</Table.Th>
 						</Table.Tr>
 					</Table.Thead>
 					<Table.Tbody>{rows}</Table.Tbody>
@@ -53,6 +88,9 @@ function ReactQueryTableFetching() {
 				defaultValue={1}
 				className="my-2"
 			/>
+			<Modal opened={opened} onClose={close} withCloseButton={false} centered size={'lg'}>
+				<UpSertModalBody close={close} type={modalRef.current} student={studentRef} />
+			</Modal>
 		</>
 	)
 }

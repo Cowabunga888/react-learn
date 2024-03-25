@@ -1,6 +1,6 @@
 import { Loader, ScrollArea } from '@mantine/core'
 import { useIntersection } from '@mantine/hooks'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import StudentListItem from '../../../../pages/react-query-page/components/student-list-item'
 import { useGetStudentsList } from '../../../../pages/react-query-page/hooks'
 

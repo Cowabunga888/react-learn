@@ -1,3 +1,4 @@
+// get students
 export interface IGetStudentsTableParams {
 	page: number | string
 	perPage: number | string
@@ -26,4 +27,35 @@ export interface IStudentTable {
 	country: string
 	avatar: string
 	btc_address: string
+}
+
+// add new student
+export interface IAddNewStudentTableParams {
+	first_name: string
+	last_name: string
+	email: string
+	gender: string
+	country: string
+	avatar: string
+	btc_address: string
+}
+export interface IAddStudentTablePayload {
+	data: IStudentTable
+	status: number
+}
+
+// update student
+export interface IUpdateStudentTableParams {
+	id: number
+	first_name: string
+	last_name: string
+	email: string
+	gender: string
+	country: string
+	avatar: string
+	btc_address: string
+}
+export interface IUpdateStudentTablePayload {
+	data: IStudentTable
+	status: number
 }
