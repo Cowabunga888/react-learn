@@ -12,6 +12,7 @@ import DynamicFormInput from '../dynamic-input'
 import { upsertFields } from './fields'
 import { useUpdateStudentTable } from '../../../../pages/react-query-page/hooks/useUpdateStudentTable'
 import toast from 'react-hot-toast'
+import { useDeleteStudentTable } from '../../../../pages/react-query-page/hooks/useDeleteStudentTable'
 
 interface IUpSertModalBody {
 	type: string
@@ -33,6 +34,8 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 		isError: updateIsError,
 	} = useUpdateStudentTable()
 
+	const { mutate: deleteStudent, isSuccess: deleteIsSuccess, isError: deleteIsError } = useDeleteStudentTable()
+
 	const methods = useForm<IAddNewStudentTableParams | IUpdateStudentTableParams>()
 	const onSubmit = (data: IAddNewStudentTableParams | IUpdateStudentTableParams) => {
 		if (type === 'ADD_STUDENT') {
@@ -49,15 +52,39 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 	}
 
 	useEffect(() => {
-		;(addIsSuccess || updateIsSuccess) && close()
+		;(addIsSuccess || updateIsSuccess || deleteIsSuccess) && close()
 
-		addIsSuccess && toast.success('Adding successfully!')
-		updateIsSuccess && toast.success('Updating successfully!')
+		addIsSuccess && toast.success('Add successfully!')
+		updateIsSuccess && toast.success('Update successfully!')
+		deleteIsSuccess && toast.success('Delete successfully!')
 
-		addIsError && toast.error('Adding failed!')
-		updateIsError && toast.error('Updating failed!')
+		addIsError && toast.error('Add failed!')
+		updateIsError && toast.error('Update failed!')
+		deleteIsError && toast.error('Delete failed!')
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [addIsSuccess, updateIsSuccess, addIsError, updateIsError])
+	}, [addIsSuccess, updateIsSuccess, addIsError, updateIsError, deleteIsSuccess, deleteIsError])
+
+	if (type === 'DELETE_STUDENT') {
+		return (
+			<div className="flex flex-col gap-3">
+				<div>You want to delete {student?.current?.first_name}?</div>
+				<div className="flex gap-2">
+					<Button
+						onClick={() => {
+							student?.current && deleteStudent({ id: student.current?.id })
+						}}
+						color="red"
+						size="sm"
+					>
+						Yes
+					</Button>
+					<Button onClick={close} color="lime" size="sm">
+						No
+					</Button>
+				</div>
+			</div>
+		)
+	}
 
 	return (
 		<FormProvider {...methods}>

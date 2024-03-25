@@ -1,15 +1,16 @@
-import { ActionIcon, Button, Loader, Modal, Pagination, ScrollArea, Table } from '@mantine/core'
+import { ActionIcon, Loader, Modal, Pagination, ScrollArea, Table } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
 import { RiUserAddLine, RiUserSettingsLine, RiUserUnfollowLine } from '@remixicon/react'
 import { useRef, useState } from 'react'
 import { useGetStudentsTable } from '../../../../pages/react-query-page/hooks'
-import { useDisclosure } from '@mantine/hooks'
-import UpSertModalBody from '../../components/upsert-modal-body'
 import { IStudentList, IStudentTable } from '../../../../pages/react-query-page/type'
+import UpSertModalBody from '../../components/upsert-modal-body'
 
 function ReactQueryTableFetching() {
 	enum modalType {
 		UPDATE_STUDENT = 'UPDATE_STUDENT',
 		ADD_STUDENT = 'ADD_STUDENT',
+		DELETE_STUDENT = 'DELETE_STUDENT',
 	}
 	const [opened, { open, close }] = useDisclosure(false)
 	const [activePage, setActivePage] = useState<number>(1)
@@ -20,7 +21,7 @@ function ReactQueryTableFetching() {
 
 	const openModal = (type: modalType, st?: IStudentTable | IStudentList | null) => {
 		modalRef.current = type
-		if (st && type === modalType.UPDATE_STUDENT) {
+		if (st && (type === modalType.UPDATE_STUDENT || type === modalType.DELETE_STUDENT)) {
 			studentRef.current = st
 		} else {
 			studentRef.current = null
@@ -43,7 +44,7 @@ function ReactQueryTableFetching() {
 				<button type="button" onClick={() => openModal(modalType.UPDATE_STUDENT, st)} className="p-1">
 					<RiUserSettingsLine size={20} className="text-gray-200 hover:text-yellow-500" />
 				</button>
-				<button type="button" className="p-1">
+				<button type="button" onClick={() => openModal(modalType.DELETE_STUDENT, st)} className="p-1">
 					<RiUserUnfollowLine size={20} className="text-gray-200 hover:text-red-500" />
 				</button>
 			</Table.Td>
@@ -88,7 +89,13 @@ function ReactQueryTableFetching() {
 				defaultValue={1}
 				className="my-2"
 			/>
-			<Modal opened={opened} onClose={close} withCloseButton={false} centered size={'lg'}>
+			<Modal
+				opened={opened}
+				onClose={close}
+				withCloseButton={false}
+				centered
+				size={modalRef.current === 'DELETE_STUDENT' ? 'sm' : 'lg'}
+			>
 				<UpSertModalBody close={close} type={modalRef.current} student={studentRef} />
 			</Modal>
 		</>

@@ -59,3 +59,13 @@ export interface IUpdateStudentTablePayload {
 	data: IStudentTable
 	status: number
 }
+
+// delete student
+export interface IDeleteStudentTableParams {
+	id: number
+}
+
+export interface IDeleteStudentTablePayload {
+	data: IStudentTable
+	status: number
+}
