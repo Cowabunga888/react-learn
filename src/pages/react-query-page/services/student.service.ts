@@ -2,6 +2,8 @@ import http from '../../../utils/http'
 import {
 	IAddNewStudentTableParams,
 	IAddStudentTablePayload,
+	IDeleteStudentTableParams,
+	IDeleteStudentTablePayload,
 	IGetStudentsTableParams,
 	IGetStudentsTablePayload,
 	IUpdateStudentTableParams,
@@ -37,6 +39,15 @@ const studentsService = {
 		}
 
 		throw new Error('studentsService.updateStudent')
+	},
+	deleteStudent: async ({ id }: IDeleteStudentTableParams) => {
+		const res: IDeleteStudentTablePayload = await http.delete(`/students/${id}`)
+
+		if (res.status === 200 || res.status === 201) {
+			return res.data
+		}
+
+		throw new Error('studentsService.deleteStudent')
 	},
 }
 
