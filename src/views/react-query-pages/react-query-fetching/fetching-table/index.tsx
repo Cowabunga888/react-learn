@@ -15,15 +15,15 @@ function ReactQueryTableFetching() {
 	const [activePage, setActivePage] = useState<number>(1)
 	const { data: students, isLoading } = useGetStudentsTable({ page: activePage, perPage: 10 })
 
-	const modal = useRef<string>(modalType.UPDATE_STUDENT)
-	const student = useRef<IStudentTable | IStudentList | null>(null)
+	const modalRef = useRef<string>(modalType.UPDATE_STUDENT)
+	const studentRef = useRef<IStudentTable | IStudentList | null>(null)
 
 	const openModal = (type: modalType, st?: IStudentTable | IStudentList | null) => {
-		modal.current = type
+		modalRef.current = type
 		if (st && type === modalType.UPDATE_STUDENT) {
-			student.current = st
+			studentRef.current = st
 		} else {
-			student.current = null
+			studentRef.current = null
 		}
 		open()
 	}
@@ -41,10 +41,10 @@ function ReactQueryTableFetching() {
 			<Table.Td>{st.gender}</Table.Td>
 			<Table.Td>
 				<button type="button" onClick={() => openModal(modalType.UPDATE_STUDENT, st)} className="p-1">
-					<RiUserSettingsLine size={20} className="text-gray-200 hover:text-yellow-400" />
+					<RiUserSettingsLine size={20} className="text-gray-200 hover:text-yellow-500" />
 				</button>
 				<button type="button" className="p-1">
-					<RiUserUnfollowLine size={20} className="text-gray-200 hover:text-red-400" />
+					<RiUserUnfollowLine size={20} className="text-gray-200 hover:text-red-500" />
 				</button>
 			</Table.Td>
 		</Table.Tr>
@@ -69,11 +69,7 @@ function ReactQueryTableFetching() {
 							<Table.Th>gender</Table.Th>
 							<Table.Th>
 								<ActionIcon color="lime">
-									<RiUserAddLine
-										onClick={() => openModal(modalType.ADD_STUDENT)}
-										size={18}
-										style={{ width: '95%', height: '95%' }}
-									/>
+									<RiUserAddLine onClick={() => openModal(modalType.ADD_STUDENT)} size={18} />
 								</ActionIcon>
 							</Table.Th>
 						</Table.Tr>
@@ -92,8 +88,8 @@ function ReactQueryTableFetching() {
 				defaultValue={1}
 				className="my-2"
 			/>
-			<Modal opened={opened} onClose={close} withCloseButton centered title={modal.current}>
-				<UpSertModalBody type={modal.current} student={student} />
+			<Modal opened={opened} onClose={close} withCloseButton={false} centered size={'lg'}>
+				<UpSertModalBody close={close} type={modalRef.current} student={studentRef} />
 			</Modal>
 		</>
 	)

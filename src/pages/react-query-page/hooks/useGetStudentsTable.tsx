@@ -7,6 +7,6 @@ export const useGetStudentsTable = ({ page, perPage }: IGetStudentsTableParams) 
 		queryKey: ['useGetStudentsTable', { page, perPage }],
 		queryFn: () => studentsService.getStudents({ page, perPage }).then((res) => res),
 		placeholderData: keepPreviousData,
-		staleTime: 10000,
+		staleTime: 1000 * 60,
 	})
 }
