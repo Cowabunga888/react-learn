@@ -82,6 +82,16 @@ export default Object.freeze({
 				},
 			},
 		},
+		tanstackTable: {
+			path: 'tanstack-table',
+			innerText: 'Tanstack Table',
+			children: {
+				basic: {
+					path: 'basic',
+					innerText: 'Basic Table',
+				},
+			},
+		},
 		notFound: {
 			path: '404',
 			innerText: 'Not-found',

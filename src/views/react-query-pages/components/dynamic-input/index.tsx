@@ -52,6 +52,8 @@ function DynamicFormInput({ allFieldsRequired, field, defaultValue }: Readonly<I
 					onChange={(value) => {
 						setValue(field.name, value, { shouldValidate: true })
 					}}
+					allowDeselect={false}
+					searchable
 					required={allFieldsRequired && field.required}
 				></Select>
 			)
@@ -60,7 +62,7 @@ function DynamicFormInput({ allFieldsRequired, field, defaultValue }: Readonly<I
 				<div className="flex gap-2 items-end">
 					<FileInput
 						accept="image/png,image/jpeg,image/jpg"
-						className="col-span-4 flex-1"
+						className="col-span-4 max-w-[80%]"
 						size="sm"
 						label={field.label}
 						placeholder={field.placeholder}
@@ -80,6 +82,7 @@ function DynamicFormInput({ allFieldsRequired, field, defaultValue }: Readonly<I
 								})
 							}
 						}}
+						classNames={{ wrapper: 'truncate text-ellipsis' }}
 						required={allFieldsRequired && field.required}
 					/>
 					<Avatar

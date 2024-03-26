@@ -27,6 +27,7 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 		isPending: addIsPending,
 		isError: addIsError,
 	} = useAddNewStudentTable()
+
 	const {
 		mutate: updateStudent,
 		isSuccess: updateIsSuccess,
@@ -52,7 +53,7 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 	}
 
 	useEffect(() => {
-		;(addIsSuccess || updateIsSuccess || deleteIsSuccess) && close()
+		if (addIsSuccess || updateIsSuccess || deleteIsSuccess) close()
 
 		addIsSuccess && toast.success('Add successfully!')
 		updateIsSuccess && toast.success('Update successfully!')
@@ -61,13 +62,16 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 		addIsError && toast.error('Add failed!')
 		updateIsError && toast.error('Update failed!')
 		deleteIsError && toast.error('Delete failed!')
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [addIsSuccess, updateIsSuccess, addIsError, updateIsError, deleteIsSuccess, deleteIsError])
 
 	if (type === 'DELETE_STUDENT') {
 		return (
 			<div className="flex flex-col gap-3">
-				<div>You want to delete {student?.current?.first_name}?</div>
+				<div>
+					You want to delete {student?.current?.first_name} {student?.current?.last_name}?
+				</div>
 				<div className="flex gap-2">
 					<Button
 						onClick={() => {

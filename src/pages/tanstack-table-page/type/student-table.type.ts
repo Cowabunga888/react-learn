@@ -13,12 +13,12 @@ export interface IGetStudentsTablePayload {
 		last: number
 		pages: number
 		items: number
-		data: IStudentTable[]
+		data: IStudent[]
 	}
 	status: number
 }
 
-export interface IStudentTable {
+export interface IStudent {
 	id: string
 	first_name: string
 	last_name: string
@@ -40,7 +40,7 @@ export interface IAddNewStudentTableParams {
 	btc_address: string
 }
 export interface IAddStudentTablePayload {
-	data: IStudentTable
+	data: IStudent
 	status: number
 }
 
@@ -56,7 +56,7 @@ export interface IUpdateStudentTableParams {
 	btc_address: string
 }
 export interface IUpdateStudentTablePayload {
-	data: IStudentTable
+	data: IStudent
 	status: number
 }
 
@@ -66,6 +66,6 @@ export interface IDeleteStudentTableParams {
 }
 
 export interface IDeleteStudentTablePayload {
-	data: IStudentTable
+	data: IStudent
 	status: number
 }
