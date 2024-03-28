@@ -1,6 +1,7 @@
-import { Checkbox } from '@mantine/core'
+import { Checkbox, Popover } from '@mantine/core'
 import { createColumnHelper } from '@tanstack/react-table'
 import { IStudent } from '../../../../../pages/tanstack-table-page/type'
+import { useDisclosure } from '@mantine/hooks'
 
 const columnHelper = createColumnHelper<IStudent>()
 
@@ -44,7 +45,7 @@ export const StudentTableColumnDef = [
 		header: 'avatar',
 		cell: (prop) => (
 			<div className="border border-dashed rounded-md w-10 h-10 m-auto">
-				<img src={prop.getValue()} alt="avatar" className="w-full h-full object-contain" />
+				<AvatarPopover src={prop.getValue()} />
 			</div>
 		),
 	}),
@@ -73,3 +74,20 @@ export const StudentTableColumnDef = [
 		cell: (prop) => <>{prop.getValue()}</>,
 	}),
 ]
+
+const AvatarPopover = ({ src }: { src: string }) => {
+	const [opened, { close, open }] = useDisclosure(false)
+
+	return (
+		<Popover position="right" withArrow shadow="md" opened={opened}>
+			<Popover.Target>
+				<button type="button" onMouseEnter={open} onMouseLeave={close}>
+					<img src={src} alt="avatar" className="w-full h-full object-contain" />
+				</button>
+			</Popover.Target>
+			<Popover.Dropdown style={{ pointerEvents: 'none' }}>
+				<img src={src} alt="avatar" className="w-[80px] h-[80px] object-contain border border-dashed" />
+			</Popover.Dropdown>
+		</Popover>
+	)
+}

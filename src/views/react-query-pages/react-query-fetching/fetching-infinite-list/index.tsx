@@ -1,5 +1,5 @@
 import { Loader, ScrollArea } from '@mantine/core'
-import { useIntersection } from '@mantine/hooks'
+import { randomId, useIntersection } from '@mantine/hooks'
 import { useEffect } from 'react'
 import StudentListItem from '../../../../pages/react-query-page/components/student-list-item'
 import { useGetStudentsList } from '../../../../pages/react-query-page/hooks'
@@ -24,7 +24,7 @@ function ReactQueryInfiniteListFetching() {
 					<ScrollArea h={500} offsetScrollbars scrollbarSize={4} p={10}>
 						{students?.pages.map((page, i) => {
 							return (
-								<div key={i}>
+								<div key={randomId()}>
 									{page.data.map((st) => {
 										return <StudentListItem data={st} key={st.id} />
 									})}

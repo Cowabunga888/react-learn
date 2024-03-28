@@ -2,6 +2,7 @@ import { Tabs } from '@mantine/core'
 import UseReducerGeneral from './useReducer-general'
 import UseReducerEX from './useReducer-ex'
 import UseReducerTodoList from './advance/todo-app/useReducer-todo'
+import { randomId } from '@mantine/hooks'
 
 function UseReducerPageView() {
 	const tabData = [
@@ -29,7 +30,7 @@ function UseReducerPageView() {
 			<Tabs.List>
 				{tabData.map((tab, i) => {
 					return (
-						<Tabs.Tab value={tab.tab_value} leftSection={tab.icon} key={i}>
+						<Tabs.Tab value={tab.tab_value} leftSection={tab.icon} key={randomId()}>
 							{tab.tab_inner_text}
 						</Tabs.Tab>
 					)
@@ -38,7 +39,7 @@ function UseReducerPageView() {
 
 			{tabData.map((tab, i) => {
 				return (
-					<Tabs.Panel value={tab.tab_value} key={i}>
+					<Tabs.Panel value={tab.tab_value} key={randomId()}>
 						<div className="pt-3">{tab.panel}</div>
 					</Tabs.Panel>
 				)

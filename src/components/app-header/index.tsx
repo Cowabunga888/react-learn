@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import useNavData from './hooks/data'
 import './style/style.css'
+import { randomId } from '@mantine/hooks'
 
 function AppHeader() {
 	const navData = useNavData()
@@ -10,7 +11,7 @@ function AppHeader() {
 			<nav className="app-header__nav-container">
 				{navData.map((nav, i) => {
 					return (
-						<NavLink to={nav.path} key={i} className="flex gap-1">
+						<NavLink to={nav.path} key={randomId()} className="flex gap-1">
 							<span>{nav.icon}</span>
 							<span>{nav.innerText}</span>
 						</NavLink>

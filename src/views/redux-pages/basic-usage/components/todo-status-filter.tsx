@@ -1,5 +1,6 @@
 import { Group, Radio } from '@mantine/core'
 import { useAppSelector } from '../../../../store/redux-app-store/hooks'
+import { randomId } from '@mantine/hooks'
 
 const style = {
 	body: {
@@ -18,7 +19,7 @@ function TodoStatusFilter() {
 					{todoState.filterStatusList.map((prio, i) => {
 						return (
 							<Radio
-								key={i}
+								key={randomId()}
 								labelPosition="right"
 								classNames={{ label: '!text-green-500' }}
 								styles={style}
