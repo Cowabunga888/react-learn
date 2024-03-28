@@ -99,7 +99,6 @@ function BasicTanstackTableView() {
 								return (
 									<Table.Tr key={_headerRow.id} className="relative">
 										{_headerRow.headers.map((_headerCol) => {
-											console.log(_headerCol)
 											return (
 												<Table.Th
 													colSpan={_headerCol.colSpan}
