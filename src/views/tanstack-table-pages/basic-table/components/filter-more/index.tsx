@@ -46,7 +46,7 @@ function ColFilterMore({ column, table }: Readonly<IColFilterMore>) {
 							<RiCloseLine
 								className="cursor-pointer"
 								onClick={() => {
-									column.setFilterValue('')
+									column.getFilterValue() !== '' && column.setFilterValue('')
 								}}
 							/>
 						}
