@@ -89,6 +89,7 @@ function ReactQueryTableFetching() {
 				defaultValue={1}
 				className="my-2"
 			/>
+
 			<Modal
 				opened={opened}
 				onClose={close}

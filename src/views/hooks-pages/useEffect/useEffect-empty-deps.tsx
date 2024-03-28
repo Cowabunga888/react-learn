@@ -46,7 +46,7 @@ const ChildComponent = () => {
 	if (isLoading) {
 		return (
 			<div className="flex items-center justify-center mt-4">
-				<Loader color="lime" />
+				<Loader />
 			</div>
 		)
 	}

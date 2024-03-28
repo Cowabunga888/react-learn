@@ -1,4 +1,4 @@
-import { RiDatabase2Line, RiHomeFill, RiReactjsFill, RiReactjsLine } from '@remixicon/react'
+import { RiDatabase2Line, RiHomeFill, RiReactjsFill, RiReactjsLine, RiTableLine } from '@remixicon/react'
 import { AppConfig } from '../../../app-config'
 
 function useNavData() {
@@ -22,6 +22,11 @@ function useNavData() {
 			path: AppConfig.router.reactQuery.path,
 			icon: <RiDatabase2Line />,
 			innerText: AppConfig.router.reactQuery.innerText,
+		},
+		{
+			path: AppConfig.router.tanstackTable.path,
+			icon: <RiTableLine />,
+			innerText: AppConfig.router.tanstackTable.innerText,
 		},
 	]
 }

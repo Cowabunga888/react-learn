@@ -46,7 +46,6 @@ function UseEffectWithDeps() {
 							radius="xs"
 							size="xs"
 							variant="filled"
-							color="lime"
 							onClick={() => {
 								handleChangeClick(i)
 							}}

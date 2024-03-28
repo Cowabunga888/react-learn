@@ -17,7 +17,6 @@ function MemoPageView() {
 					radius="xs"
 					size="xs"
 					variant="filled"
-					color="lime"
 				>
 					setCount 1
 				</Button>
@@ -31,7 +30,6 @@ function MemoPageView() {
 					radius="xs"
 					size="xs"
 					variant="filled"
-					color="lime"
 				>
 					setCount 2
 				</Button>

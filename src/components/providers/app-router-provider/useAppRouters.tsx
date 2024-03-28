@@ -19,6 +19,8 @@ import UseRefPageView from '../../../views/hooks-pages/useRef'
 import UseStatePageView from '../../../views/hooks-pages/useState'
 import ReduxBasicUsage from '../../../views/redux-pages/basic-usage'
 import ReduxGeneralPage from '../../../views/redux-pages/general'
+import TanstackTablePage from '../../../pages/tanstack-table-page'
+import BasicTanstackTable from '../../../pages/tanstack-table-page/pages/basic-table'
 
 function useAppRouters() {
 	const routerObject = createBrowserRouter([
@@ -113,6 +115,20 @@ function useAppRouters() {
 						{
 							path: AppConfig.router.reactQuery.children.queryFetching.path,
 							element: <ReactQueryApiFetchingPage />,
+						},
+					],
+				},
+				{
+					path: AppConfig.router.tanstackTable.path,
+					element: <TanstackTablePage />,
+					children: [
+						{
+							path: '',
+							element: <BasicTanstackTable />,
+						},
+						{
+							path: AppConfig.router.tanstackTable.children.basic.path,
+							element: <BasicTanstackTable />,
 						},
 					],
 				},
