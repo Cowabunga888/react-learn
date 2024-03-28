@@ -1,6 +1,7 @@
 import { Button, Input } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import AppBlockQuote from '../../../components/block-quotes'
+import { randomId } from '@mantine/hooks'
 
 function UseMemoPageView() {
 	const [name, setName] = useState<string>('')
@@ -54,7 +55,10 @@ function UseMemoPageView() {
 				<div className="w-[500px] m-auto mt-2 p-2 rounded-md border flex flex-col gap-4">
 					{product.map((prod, i) => {
 						return (
-							<div className="flex items-start justify-start gap-2 last:border-b-0 border-b" key={i}>
+							<div
+								className="flex items-start justify-start gap-2 last:border-b-0 border-b"
+								key={randomId()}
+							>
 								<span>{i + 1}.</span>
 								<div className="w-full flex flex-col items-start justify-between">
 									<div className="w-full flex items-center justify-between">

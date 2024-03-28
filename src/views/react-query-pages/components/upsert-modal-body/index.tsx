@@ -13,6 +13,7 @@ import { upsertFields } from './fields'
 import { useUpdateStudentTable } from '../../../../pages/react-query-page/hooks/useUpdateStudentTable'
 import toast from 'react-hot-toast'
 import { useDeleteStudentTable } from '../../../../pages/react-query-page/hooks/useDeleteStudentTable'
+import { randomId } from '@mantine/hooks'
 
 interface IUpSertModalBody {
 	type: string
@@ -116,7 +117,7 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 							}
 
 							return (
-								<div className="col-span-3" key={i}>
+								<div className="col-span-3" key={randomId()}>
 									<DynamicFormInput
 										allFieldsRequired={type === 'ADD_STUDENT'}
 										field={field}

@@ -6,6 +6,7 @@ import UseEffectWithDeps from './useEffect-with-deps'
 import UseEffectDOMEvent from './advance/useEffect-DOM-event'
 import UseEffectTimeoutFunc from './advance/useEffect-timeout-func'
 import UseEffectUploadImg from './advance/useEffect-upload-img'
+import { randomId } from '@mantine/hooks'
 
 function UseEffectPageView() {
 	const tabData = [
@@ -58,7 +59,7 @@ function UseEffectPageView() {
 			<Tabs.List>
 				{tabData.map((tab, i) => {
 					return (
-						<Tabs.Tab value={tab.tab_value} leftSection={tab.icon} key={i}>
+						<Tabs.Tab value={tab.tab_value} leftSection={tab.icon} key={randomId()}>
 							{tab.tab_inner_text}
 						</Tabs.Tab>
 					)
@@ -67,7 +68,7 @@ function UseEffectPageView() {
 
 			{tabData.map((tab, i) => {
 				return (
-					<Tabs.Panel value={tab.tab_value} key={i}>
+					<Tabs.Panel value={tab.tab_value} key={randomId()}>
 						<div className="pt-3">{tab.panel}</div>
 					</Tabs.Panel>
 				)

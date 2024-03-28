@@ -57,27 +57,29 @@ function ReactQueryTableFetching() {
 
 	return (
 		<>
-			<ScrollArea.Autosize mah={700}>
-				<Table>
-					<Table.Thead>
-						<Table.Tr>
-							<Table.Th>#</Table.Th>
-							<Table.Th>avatar</Table.Th>
-							<Table.Th>first_name</Table.Th>
-							<Table.Th>last_name</Table.Th>
-							<Table.Th>country</Table.Th>
-							<Table.Th>email</Table.Th>
-							<Table.Th>gender</Table.Th>
-							<Table.Th>
-								<ActionIcon color="lime">
-									<RiUserAddLine onClick={() => openModal(modalType.ADD_STUDENT)} size={18} />
-								</ActionIcon>
-							</Table.Th>
-						</Table.Tr>
-					</Table.Thead>
-					<Table.Tbody>{rows}</Table.Tbody>
-				</Table>
-			</ScrollArea.Autosize>
+			<div className="w-full h-[500px] border">
+				<Table.ScrollContainer minWidth={600} className="relative h-full">
+					<Table>
+						<Table.Thead>
+							<Table.Tr>
+								<Table.Th>#</Table.Th>
+								<Table.Th>avatar</Table.Th>
+								<Table.Th>first_name</Table.Th>
+								<Table.Th>last_name</Table.Th>
+								<Table.Th>country</Table.Th>
+								<Table.Th>email</Table.Th>
+								<Table.Th>gender</Table.Th>
+								<Table.Th>
+									<ActionIcon color="lime">
+										<RiUserAddLine onClick={() => openModal(modalType.ADD_STUDENT)} size={18} />
+									</ActionIcon>
+								</Table.Th>
+							</Table.Tr>
+						</Table.Thead>
+						<Table.Tbody>{rows}</Table.Tbody>
+					</Table>
+				</Table.ScrollContainer>
+			</div>
 
 			<Pagination
 				color="lime"

@@ -1,0 +1,3 @@
+.side-bar{
+  @apply flex-shrink-0 min-w-[220px] border-r text-sm h-[calc(100vh-80px)] sticky left-0 top-[80px];
+}

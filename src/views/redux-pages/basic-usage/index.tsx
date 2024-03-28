@@ -6,6 +6,7 @@ import TodoPriorityFilter from './components/todo-priority-filter'
 import TodoSearchInput from './components/todo-search-input'
 import TodoStatusFilter from './components/todo-status-filter'
 import './style.css'
+import { randomId } from '@mantine/hooks'
 
 function ReduxBasicUsage() {
 	const todoState = useAppSelector((state) => state.todoForm)
@@ -24,7 +25,7 @@ function ReduxBasicUsage() {
 				<ScrollArea h={300} className="border border-dashed rounded-sm">
 					<div className="flex flex-col gap-3 p-2">
 						{todoState.todoList.map((todo, i) => {
-							return <TodoItem todo={todo} key={i} />
+							return <TodoItem todo={todo} key={randomId()} />
 						})}
 					</div>
 				</ScrollArea>

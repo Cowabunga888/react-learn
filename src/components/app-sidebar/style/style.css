@@ -1,0 +1,5 @@
+.sidebar-accordion {
+	.mantine-Accordion-item[data-active] {
+		/* @apply bg-emerald-300; */
+	}
+}
