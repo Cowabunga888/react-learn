@@ -18,7 +18,6 @@ function WithContext() {
 				onChange={(e) => setTheme(e.currentTarget.checked)}
 				onLabel={<RiSunLine size={15} />}
 				offLabel={<RiMoonLine size={15} />}
-				color="lime"
 				defaultChecked
 			/>
 			<FirstChild />

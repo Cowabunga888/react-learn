@@ -27,6 +27,9 @@ export interface IStudent {
 	country: string
 	avatar: string
 	btc_address: string
+
+	// table option
+	select?: string
 }
 
 // add new student
