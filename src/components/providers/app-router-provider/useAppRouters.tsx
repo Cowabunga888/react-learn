@@ -3,6 +3,13 @@ import App from '../../../App'
 import { AppConfig } from '../../../app-config'
 import NotFoundPage from '../../../pages/404'
 import HooksPage from '../../../pages/hooks-page'
+import LibraryPage from '../../../pages/library-page'
+import ReactQueryPage from '../../../pages/library-page/pages/react-query-page'
+import BasicApiFetchingPage from '../../../pages/library-page/pages/react-query-page/pages/basic-api-fetching'
+import ReactQueryApiFetchingPage from '../../../pages/library-page/pages/react-query-page/pages/react-query-fetching'
+import ReduxPage from '../../../pages/library-page/pages/redux-page'
+import TanstackTablePage from '../../../pages/library-page/pages/tanstack-table-page'
+import BasicTanstackTable from '../../../pages/library-page/pages/tanstack-table-page/pages/basic-table'
 import MemoPageView from '../../../views/hooks-pages/memo'
 import UseCallbackPageView from '../../../views/hooks-pages/useCallback'
 import UseContextPageView from '../../../views/hooks-pages/useContext'
@@ -13,15 +20,8 @@ import UseMemoPageView from '../../../views/hooks-pages/useMemo'
 import UseReducerPageView from '../../../views/hooks-pages/useReducer'
 import UseRefPageView from '../../../views/hooks-pages/useRef'
 import UseStatePageView from '../../../views/hooks-pages/useState'
-import LibraryPage from '../../../pages/library-page'
-import ReduxGeneralPage from '../../../views/library-pages/pages/redux-pages/general'
 import ReduxBasicUsage from '../../../views/library-pages/pages/redux-pages/basic-usage'
-import TanstackTablePage from '../../../pages/library-page/pages/tanstack-table-page'
-import BasicTanstackTable from '../../../pages/library-page/pages/tanstack-table-page/pages/basic-table'
-import ReduxPage from '../../../pages/library-page/pages/redux-page'
-import ReactQueryPage from '../../../pages/library-page/pages/react-query-page'
-import BasicApiFetchingPage from '../../../pages/library-page/pages/react-query-page/pages/basic-api-fetching'
-import ReactQueryApiFetchingPage from '../../../pages/library-page/pages/react-query-page/pages/react-query-fetching'
+import ReduxGeneralPage from '../../../views/library-pages/pages/redux-pages/general'
 
 function useAppRouters() {
 	const routerObject = createBrowserRouter([
@@ -31,7 +31,7 @@ function useAppRouters() {
 			children: [
 				{
 					path: '',
-					element: <div>app body</div>,
+					element: <div>Home body</div>,
 				},
 				{
 					path: AppConfig.router.hooks.path,
