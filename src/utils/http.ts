@@ -2,7 +2,6 @@ import axios, { AxiosInstance } from 'axios'
 
 // to start json server run command below
 // json-server --watch data/db.json --port 8000
-
 class Http {
 	instance: AxiosInstance
 
