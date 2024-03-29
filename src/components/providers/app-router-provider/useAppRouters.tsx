@@ -3,10 +3,6 @@ import App from '../../../App'
 import { AppConfig } from '../../../app-config'
 import NotFoundPage from '../../../pages/404'
 import HooksPage from '../../../pages/hooks-page'
-import ReactQueryPage from '../../../pages/react-query-page'
-import BasicApiFetchingPage from '../../../pages/react-query-page/pages/basic-api-fetching'
-import ReactQueryApiFetchingPage from '../../../pages/react-query-page/pages/react-query-fetching'
-import ReduxPage from '../../../pages/redux-page'
 import MemoPageView from '../../../views/hooks-pages/memo'
 import UseCallbackPageView from '../../../views/hooks-pages/useCallback'
 import UseContextPageView from '../../../views/hooks-pages/useContext'
@@ -17,10 +13,15 @@ import UseMemoPageView from '../../../views/hooks-pages/useMemo'
 import UseReducerPageView from '../../../views/hooks-pages/useReducer'
 import UseRefPageView from '../../../views/hooks-pages/useRef'
 import UseStatePageView from '../../../views/hooks-pages/useState'
-import ReduxBasicUsage from '../../../views/redux-pages/basic-usage'
-import ReduxGeneralPage from '../../../views/redux-pages/general'
-import TanstackTablePage from '../../../pages/tanstack-table-page'
-import BasicTanstackTable from '../../../pages/tanstack-table-page/pages/basic-table'
+import LibraryPage from '../../../pages/library-page'
+import ReduxGeneralPage from '../../../views/library-pages/pages/redux-pages/general'
+import ReduxBasicUsage from '../../../views/library-pages/pages/redux-pages/basic-usage'
+import TanstackTablePage from '../../../pages/library-page/pages/tanstack-table-page'
+import BasicTanstackTable from '../../../pages/library-page/pages/tanstack-table-page/pages/basic-table'
+import ReduxPage from '../../../pages/library-page/pages/redux-page'
+import ReactQueryPage from '../../../pages/library-page/pages/react-query-page'
+import BasicApiFetchingPage from '../../../pages/library-page/pages/react-query-page/pages/basic-api-fetching'
+import ReactQueryApiFetchingPage from '../../../pages/library-page/pages/react-query-page/pages/react-query-fetching'
 
 function useAppRouters() {
 	const routerObject = createBrowserRouter([
@@ -83,52 +84,58 @@ function useAppRouters() {
 					],
 				},
 				{
-					path: AppConfig.router.redux.path,
-					element: <ReduxPage />,
+					path: AppConfig.router.library.path,
+					element: <LibraryPage />,
 					children: [
 						{
-							path: '',
-							element: <ReduxGeneralPage />,
+							path: AppConfig.router.redux.path,
+							element: <ReduxPage />,
+							children: [
+								{
+									path: '',
+									element: <ReduxGeneralPage />,
+								},
+								{
+									path: AppConfig.router.redux.children.basic.path,
+									element: <ReduxBasicUsage />,
+								},
+								{
+									path: AppConfig.router.redux.children.advance.path,
+									element: <ReduxBasicUsage />,
+								},
+							],
 						},
 						{
-							path: AppConfig.router.redux.children.basic.path,
-							element: <ReduxBasicUsage />,
+							path: AppConfig.router.reactQuery.path,
+							element: <ReactQueryPage />,
+							children: [
+								{
+									path: '',
+									element: <BasicApiFetchingPage />,
+								},
+								{
+									path: AppConfig.router.reactQuery.children.basic.path,
+									element: <BasicApiFetchingPage />,
+								},
+								{
+									path: AppConfig.router.reactQuery.children.queryFetching.path,
+									element: <ReactQueryApiFetchingPage />,
+								},
+							],
 						},
 						{
-							path: AppConfig.router.redux.children.advance.path,
-							element: <ReduxBasicUsage />,
-						},
-					],
-				},
-				{
-					path: AppConfig.router.reactQuery.path,
-					element: <ReactQueryPage />,
-					children: [
-						{
-							path: '',
-							element: <BasicApiFetchingPage />,
-						},
-						{
-							path: AppConfig.router.reactQuery.children.basic.path,
-							element: <BasicApiFetchingPage />,
-						},
-						{
-							path: AppConfig.router.reactQuery.children.queryFetching.path,
-							element: <ReactQueryApiFetchingPage />,
-						},
-					],
-				},
-				{
-					path: AppConfig.router.tanstackTable.path,
-					element: <TanstackTablePage />,
-					children: [
-						{
-							path: '',
-							element: <BasicTanstackTable />,
-						},
-						{
-							path: AppConfig.router.tanstackTable.children.basic.path,
-							element: <BasicTanstackTable />,
+							path: AppConfig.router.tanstackTable.path,
+							element: <TanstackTablePage />,
+							children: [
+								{
+									path: '',
+									element: <BasicTanstackTable />,
+								},
+								{
+									path: AppConfig.router.tanstackTable.children.basic.path,
+									element: <BasicTanstackTable />,
+								},
+							],
 						},
 					],
 				},

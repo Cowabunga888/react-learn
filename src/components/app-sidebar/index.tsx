@@ -1,12 +1,13 @@
 import { Accordion } from '@mantine/core'
 import { randomId } from '@mantine/hooks'
 import clsx from 'clsx'
-import { NavLink, useMatches } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import useSidebarMap from './hooks'
 import './style/style.css'
+
 function AppSideBar() {
 	const sidebarMap = useSidebarMap()
-	const matches = useMatches()
+	const { pathname } = useLocation()
 
 	return (
 		<Accordion defaultValue={sidebarMap[0].title} className="mt-2 sidebar-accordion">
@@ -22,9 +23,7 @@ function AppSideBar() {
 										className={clsx(
 											{ 'ml-2 border-l-2 border-lime-400': true },
 											{
-												'bg-lime-100':
-													matches.filter((match) => match.pathname.includes(item.path))
-														.length > 0,
+												'bg-lime-100': pathname === item.path,
 											}
 										)}
 									>

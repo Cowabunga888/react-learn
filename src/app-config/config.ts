@@ -50,6 +50,54 @@ export default Object.freeze({
 				},
 			},
 		},
+		library: {
+			path: 'library',
+			innerText: 'Library',
+			children: {
+				redux: {
+					path: 'redux',
+					innerText: 'Redux',
+					children: {
+						general: {
+							path: '',
+							innerText: 'General',
+						},
+						basic: {
+							path: 'basic',
+							innerText: 'Basic',
+						},
+						advance: {
+							path: 'advance',
+							innerText: 'Advance',
+						},
+					},
+				},
+				reactQuery: {
+					path: 'react-query',
+					innerText: 'React Query',
+					children: {
+						basic: {
+							path: 'basic',
+							innerText: 'Basic',
+						},
+						queryFetching: {
+							path: 'query-fetching',
+							innerText: 'queryFetching',
+						},
+					},
+				},
+				tanstackTable: {
+					path: 'tanstack-table',
+					innerText: 'Tanstack Table',
+					children: {
+						basic: {
+							path: 'basic',
+							innerText: 'Basic Table',
+						},
+					},
+				},
+			},
+		},
 		redux: {
 			path: 'redux',
 			innerText: 'Redux',
