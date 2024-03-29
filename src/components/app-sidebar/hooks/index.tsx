@@ -11,43 +11,43 @@ function useSidebarMap() {
 			items: [
 				{
 					innerText: AppConfig.router.hooks.children.useState.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useState.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useState.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useEffect.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useEffect.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useEffect.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useLayoutEffect.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useLayoutEffect.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useLayoutEffect.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useRef.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useRef.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useRef.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.Memo.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.Memo.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.Memo.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useCallBack.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useCallBack.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useCallBack.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useMemo.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useMemo.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useMemo.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useReducer.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useReducer.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useReducer.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useContext.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useContext.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useContext.path}`,
 				},
 				{
 					innerText: AppConfig.router.hooks.children.useImperativeHandle.innerText,
-					path: `${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useImperativeHandle.path}`,
+					path: `/${AppConfig.router.hooks.path}/${AppConfig.router.hooks.children.useImperativeHandle.path}`,
 				},
 			],
 		},
@@ -58,15 +58,15 @@ function useSidebarMap() {
 			items: [
 				{
 					innerText: AppConfig.router.redux.innerText,
-					path: AppConfig.router.redux.path,
+					path: `/${AppConfig.router.library.path}/${AppConfig.router.redux.path}`,
 				},
 				{
 					innerText: AppConfig.router.reactQuery.innerText,
-					path: AppConfig.router.reactQuery.path,
+					path: `/${AppConfig.router.library.path}/${AppConfig.router.reactQuery.path}`,
 				},
 				{
 					innerText: AppConfig.router.tanstackTable.innerText,
-					path: AppConfig.router.tanstackTable.path,
+					path: `/${AppConfig.router.library.path}/${AppConfig.router.tanstackTable.path}`,
 				},
 			],
 		},
