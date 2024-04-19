@@ -1,6 +1,6 @@
 import { MantineProvider } from '@mantine/core'
 import React from 'react'
-import { ThemeProvider, useThemeContext } from './theme-provider'
+import { useThemeContext } from './theme-provider'
 
 interface Props {
 	children: React.ReactNode
