@@ -52,7 +52,7 @@ function ReactQueryTableFetching() {
 	))
 
 	if (isLoading) {
-		return <Loader color="lime" m={'auto'} />
+		return <Loader m={'auto'} />
 	}
 
 	return (
@@ -70,7 +70,7 @@ function ReactQueryTableFetching() {
 								<Table.Th>email</Table.Th>
 								<Table.Th>gender</Table.Th>
 								<Table.Th>
-									<ActionIcon color="lime">
+									<ActionIcon>
 										<RiUserAddLine onClick={() => openModal(modalType.ADD_STUDENT)} size={18} />
 									</ActionIcon>
 								</Table.Th>
@@ -82,7 +82,6 @@ function ReactQueryTableFetching() {
 			</div>
 
 			<Pagination
-				color="lime"
 				size="sm"
 				value={activePage}
 				onChange={setActivePage}

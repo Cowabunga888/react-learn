@@ -18,7 +18,6 @@ interface IDynamicFormInput {
 }
 
 function DynamicFormInput({ allFieldsRequired, field, defaultValue }: Readonly<IDynamicFormInput>) {
-	// const defaultValue = defaultValue
 	const { register, setValue } = useFormContext()
 	const [imgFile, setImgFile] = useState<string>()
 

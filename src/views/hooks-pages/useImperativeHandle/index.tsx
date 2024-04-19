@@ -10,10 +10,10 @@ function UseImperativeHandlePageView() {
 		<>
 			<VideoComponent ref={videoRef} />
 			<div className="flex gap-3 mt-2">
-				<Button onClick={() => videoRef.current?.play()} radius="xs" size="xs" variant="filled" color="lime">
+				<Button onClick={() => videoRef.current?.play()} radius="xs" size="xs" variant="filled">
 					Play
 				</Button>
-				<Button onClick={() => videoRef.current?.pause()} radius="xs" size="xs" variant="filled" color="lime">
+				<Button onClick={() => videoRef.current?.pause()} radius="xs" size="xs" variant="filled">
 					Pause
 				</Button>
 			</div>

@@ -11,7 +11,7 @@ const ChildComponent: React.FC<IChildComponent> = ({ onIncrease }) => {
 	return (
 		<div className="mt-3 p-2 border border-red-400 border-dashed">
 			<div>Child render: {a}</div>
-			<Button onClick={onIncrease} radius="xs" size="xs" variant="filled" color="lime">
+			<Button onClick={onIncrease} radius="xs" size="xs" variant="filled">
 				setCount 1
 			</Button>
 		</div>

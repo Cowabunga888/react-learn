@@ -25,7 +25,7 @@ function TodoSearchInput() {
 					placeholder="Search todo..."
 					className="w-full"
 				/>
-				<Button radius="xs" variant="filled" color="lime">
+				<Button radius="xs" variant="filled">
 					<RiSearch2Line size={18} />
 				</Button>
 			</div>

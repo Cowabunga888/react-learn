@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
 import { Loader, ScrollArea } from '@mantine/core'
-import { IStudentTable } from '../../../../../pages/library-page/pages/react-query-page/type'
-import { studentsService } from '../../../../../pages/library-page/pages/react-query-page/services'
+import { useEffect, useState } from 'react'
 import StudentListItem from '../../../../../pages/library-page/pages/react-query-page/components/student-list-item'
 import { IStudent } from '../../../../../pages/library-page/pages/tanstack-table-page/type'
 import http from '../../../../../utils/http'
@@ -37,7 +35,7 @@ function BasicApiFetchingView() {
 	return (
 		<div className="w-full flex items-center justify-center">
 			<div className="w-[400px] p-3 border rounded-md flex flex-col gap-3">
-				{isLoading && <Loader color="lime" m={'auto'} />}
+				{isLoading && <Loader m={'auto'} />}
 				{!isLoading && (
 					<ScrollArea h={500} offsetScrollbars scrollbarSize={4} p={10}>
 						{students?.map((st) => {

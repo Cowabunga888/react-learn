@@ -23,7 +23,6 @@ function TodoStatusFilter() {
 								labelPosition="right"
 								classNames={{ label: '!text-green-500' }}
 								styles={style}
-								color="lime"
 								value={prio}
 								label={prio}
 							/>

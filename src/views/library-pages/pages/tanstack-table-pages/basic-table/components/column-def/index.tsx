@@ -11,7 +11,6 @@ export const StudentTableColumnDef = [
 			<Checkbox
 				label={`${table.getSelectedRowModel().flatRows.length}/${table.getPreFilteredRowModel().rows.length}`}
 				size="xs"
-				color="lime"
 				radius="xs"
 				{...{
 					checked: table.getIsAllRowsSelected(),
@@ -23,7 +22,6 @@ export const StudentTableColumnDef = [
 		cell: ({ row }) => (
 			<Checkbox
 				size="xs"
-				color="lime"
 				radius="xs"
 				className="flex justify-center"
 				{...{

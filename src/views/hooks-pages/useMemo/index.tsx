@@ -46,7 +46,7 @@ function UseMemoPageView() {
 						e.key === 'Enter' && handleAddProduct()
 					}}
 				/>
-				<Button onClick={handleAddProduct} radius="xs" size="xs" variant="filled" color="lime">
+				<Button onClick={handleAddProduct} radius="xs" size="xs" variant="filled">
 					Add
 				</Button>
 			</div>
