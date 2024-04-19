@@ -14,7 +14,6 @@ const AppBlockQuote: React.FC<Props> = ({ children, innerText, text, className }
 		<Blockquote
 			className={className + ' text-green-700 font-semibold text-sm'}
 			style={{ paddingLeft: 15 }}
-			color="lime"
 			iconSize={30}
 			icon={<RiInformationLine />}
 			mt="xl"

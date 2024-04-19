@@ -23,7 +23,7 @@ function AppSideBar() {
 										className={clsx(
 											{ 'ml-2 border-l-2 border-lime-400': true },
 											{
-												'bg-lime-100': pathname === item.path,
+												'bg-lime-100': pathname.includes(item.path),
 											}
 										)}
 									>

@@ -23,7 +23,6 @@ function UseLayoutEffectPageView() {
 					radius="xs"
 					size="xs"
 					variant="filled"
-					color="lime"
 				>
 					<RiAddLine />
 				</Button>

@@ -19,7 +19,7 @@ function ReactQueryInfiniteListFetching() {
 	return (
 		<div className="w-full flex items-center justify-center">
 			<div className="w-[400px] p-3 border rounded-md flex flex-col gap-3">
-				{isLoading && <Loader color="lime" m={'auto'} />}
+				{isLoading && <Loader m={'auto'} />}
 				{!isLoading && (
 					<ScrollArea h={500} offsetScrollbars scrollbarSize={4} p={10}>
 						{students?.pages?.map((page, i) => {
@@ -34,7 +34,7 @@ function ReactQueryInfiniteListFetching() {
 
 						{hasNextPage && (
 							<div className="w-full flex justify-center">
-								<Loader ref={ref} color="lime" m={'auto'} size={'sm'} />
+								<Loader ref={ref} m={'auto'} size={'sm'} />
 							</div>
 						)}
 					</ScrollArea>

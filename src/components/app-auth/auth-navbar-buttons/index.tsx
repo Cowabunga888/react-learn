@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core'
-import React from 'react'
 import { useAppModal } from '../../app-modal/store/useAppModal'
 import AuthModalContent from '../auth-modal-content'
+import ThemeSwitch from '../../theme-switch'
 
 function AuthNavbarButtons() {
 	const { open, setModalContent, setModalSize } = useAppModal((state) => ({
@@ -30,6 +30,7 @@ function AuthNavbarButtons() {
 			<Button variant="outline" size="xs" onClick={handleSignupClick}>
 				Signup
 			</Button>
+			<ThemeSwitch />
 		</>
 	)
 }

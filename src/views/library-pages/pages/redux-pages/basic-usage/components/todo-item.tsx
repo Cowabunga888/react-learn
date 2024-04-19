@@ -39,7 +39,6 @@ const TodoItem = ({ todo }: ITodoItemProps) => {
 				<Checkbox
 					checked={checked}
 					onChange={handleMarkTodo}
-					color="lime"
 					label={todo.label}
 					labelPosition="right"
 					classNames={{

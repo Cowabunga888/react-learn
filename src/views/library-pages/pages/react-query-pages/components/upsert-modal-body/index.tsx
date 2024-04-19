@@ -83,7 +83,7 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 					>
 						Yes
 					</Button>
-					<Button onClick={close} color="lime" size="sm">
+					<Button onClick={close} size="sm">
 						No
 					</Button>
 				</div>
@@ -95,12 +95,7 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 		<FormProvider {...methods}>
 			<Box pos="relative">
 				{(addIsPending || updateIsPending) && (
-					<LoadingOverlay
-						visible={true}
-						color="lime"
-						zIndex={1000}
-						overlayProps={{ radius: 'sm', blur: 2 }}
-					/>
+					<LoadingOverlay visible={true} zIndex={1000} overlayProps={{ radius: 'sm', blur: 2 }} />
 				)}
 
 				<form onSubmit={methods.handleSubmit(onSubmit)}>
@@ -128,7 +123,7 @@ function UpSertModalBody({ type, student, close }: Readonly<IUpSertModalBody>) {
 						})}
 					</div>
 
-					<Button type="submit" color="lime" size="xs" className="mt-3">
+					<Button type="submit" size="xs" className="mt-3">
 						Submit
 					</Button>
 				</form>

@@ -44,7 +44,7 @@ function UseRefPageView() {
 	return (
 		<>
 			<div className="flex items-center justify-center gap-2">
-				<Button onClick={handleStart} radius="xs" size="xs" variant="filled" color="lime">
+				<Button onClick={handleStart} radius="xs" size="xs" variant="filled">
 					Start
 				</Button>
 

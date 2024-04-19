@@ -53,7 +53,7 @@ function TodoAddItem() {
 				checkIconPosition="right"
 				onChange={setPriority}
 			/>
-			<Button onClick={handleAddButtonClick} radius="xs" variant="filled" color="lime" className="flex-shrink-0">
+			<Button onClick={handleAddButtonClick} radius="xs" variant="filled" className="flex-shrink-0">
 				Add
 			</Button>
 		</div>

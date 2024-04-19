@@ -26,11 +26,11 @@ function UseReducerEX() {
 
 	return (
 		<div className="flex items-center justify-center gap-2">
-			<Button onClick={() => dispatch(DOWN_ACTION)} radius="xs" size="xs" variant="filled" color="lime">
+			<Button onClick={() => dispatch(DOWN_ACTION)} radius="xs" size="xs" variant="filled">
 				<RiSubtractLine />
 			</Button>
 			<h2 className="text-lg font-semibold">{count}</h2>
-			<Button onClick={() => dispatch(UP_ACTION)} radius="xs" size="xs" variant="filled" color="lime">
+			<Button onClick={() => dispatch(UP_ACTION)} radius="xs" size="xs" variant="filled">
 				<RiAddLine />
 			</Button>
 		</div>

@@ -1,10 +1,9 @@
-import { NavLink } from 'react-router-dom'
-import useNavData from './hooks/data'
-import './style/style.css'
 import { randomId } from '@mantine/hooks'
 import { RiAncientGateFill } from '@remixicon/react'
-import { Button } from '@mantine/core'
+import { NavLink } from 'react-router-dom'
 import AuthNavbarButtons from '../app-auth/auth-navbar-buttons'
+import useNavData from './hooks/data'
+import './style/style.css'
 
 function AppHeader() {
 	const navData = useNavData()
