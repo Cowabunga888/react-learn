@@ -1,5 +1,31 @@
 import { MantineColorsTuple } from '@mantine/core'
 
+const defaultTheme: MantineColorsTuple = [
+	'#f3f3fe',
+	'#e4e6ed',
+	'#c8cad3',
+	'#a9adb9',
+	'#9093a4',
+	'#808496',
+	'#767c91',
+	'#656a7e',
+	'#585e72',
+	'#4a5167',
+]
+
+const blueTheme: MantineColorsTuple = [
+	'#e5f4ff',
+	'#cde2ff',
+	'#9bc2ff',
+	'#64a0ff',
+	'#3984fe',
+	'#1d72fe',
+	'#0969ff',
+	'#0058e4',
+	'#004ecc',
+	'#0043b5',
+]
+
 const limeTheme: MantineColorsTuple = [
 	'#effee7',
 	'#e0f8d4',
@@ -12,6 +38,7 @@ const limeTheme: MantineColorsTuple = [
 	'#4da91b',
 	'#3d920c',
 ]
+
 const yellowTheme: MantineColorsTuple = [
 	'#fffbe0',
 	'#fff5ca',
@@ -64,4 +91,4 @@ const violetTheme: MantineColorsTuple = [
 	'#501599',
 ]
 
-export { limeTheme, yellowTheme, tomatoTheme, redTheme, violetTheme }
+export { defaultTheme, blueTheme, limeTheme, yellowTheme, tomatoTheme, redTheme, violetTheme }

@@ -13,7 +13,7 @@ interface IProvider {
 
 const queryClient = new QueryClient()
 
-function Provider({ children }: IProvider) {
+function AppProvider({ children }: IProvider) {
 	return (
 		<ThemeProvider>
 			<AppMantineProvider>
@@ -29,4 +29,4 @@ function Provider({ children }: IProvider) {
 	)
 }
 
-export default Provider
+export default AppProvider

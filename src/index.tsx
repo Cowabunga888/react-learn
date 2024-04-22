@@ -4,15 +4,15 @@ import reportWebVitals from './reportWebVitals'
 
 import './global.css'
 import '@mantine/core/styles.css'
-import Provider from './components/providers'
+import AppProvider from './components/providers'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
 	// <React.StrictMode>
-	<Provider>
+	<AppProvider>
 		<AppRouterProvider />
-	</Provider>
+	</AppProvider>
 	// </React.StrictMode>
 )
 
