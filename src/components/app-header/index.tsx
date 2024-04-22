@@ -1,26 +1,35 @@
 import { randomId } from '@mantine/hooks'
 import { RiAncientGateFill } from '@remixicon/react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import AuthNavbarButtons from '../app-auth/auth-navbar-buttons'
 import useNavData from './hooks/data'
-import './style/style.css'
+import './css/style.css'
+import clsx from 'clsx'
 
 function AppHeader() {
 	const navData = useNavData()
+	const { pathname } = useLocation()
 
 	return (
 		<header className="app-header">
-			<NavLink to={'/'} className="flex gap-3 items-center">
+			{/* <NavLink to={'/'} className="flex gap-3 items-center">
 				<span className="p-2 rounded-md border border-dashed">
-					<RiAncientGateFill />
+					<RiAncientGateFill color="var(--mantine-color-color-filled)" />
 				</span>
 				<span>Home</span>
-			</NavLink>
+			</NavLink> */}
 
 			<nav className="app-header__nav-container">
-				{navData.map((nav, i) => {
+				{navData.map((nav) => {
 					return (
-						<NavLink to={nav.path} key={randomId()} className="flex gap-1">
+						<NavLink
+							to={nav.path}
+							key={randomId()}
+							className={clsx(
+								{ 'flex gap-1': true },
+								{ 'text-[var(--mantine-color-color-filled)]': pathname === '/' + nav.path }
+							)}
+						>
 							<span>{nav.icon}</span>
 							<span>{nav.innerText}</span>
 						</NavLink>

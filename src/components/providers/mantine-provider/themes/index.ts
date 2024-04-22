@@ -13,16 +13,16 @@ const limeTheme: MantineColorsTuple = [
 	'#3d920c',
 ]
 const yellowTheme: MantineColorsTuple = [
-	'#fdfce5',
-	'#f8f6d3',
-	'#f0ecaa',
-	'#e7e17c',
-	'#e0d957',
-	'#dbd33e',
-	'#d9d02f',
-	'#c0b820',
-	'#aaa316',
-	'#938c03',
+	'#fffbe0',
+	'#fff5ca',
+	'#ffe999',
+	'#ffdd62',
+	'#ffd336',
+	'#ffcc18',
+	'#ffc901',
+	'#e3b100',
+	'#ca9d00',
+	'#ae8700',
 ]
 
 const tomatoTheme: MantineColorsTuple = [
@@ -51,4 +51,17 @@ const redTheme: MantineColorsTuple = [
 	'#a90003',
 ]
 
-export { limeTheme, yellowTheme, tomatoTheme, redTheme }
+const violetTheme: MantineColorsTuple = [
+	'#f6ecff',
+	'#e7d6fb',
+	'#caabf1',
+	'#ac7ce8',
+	'#9354e0',
+	'#833cdb',
+	'#7b2eda',
+	'#6921c2',
+	'#5d1cae',
+	'#501599',
+]
+
+export { limeTheme, yellowTheme, tomatoTheme, redTheme, violetTheme }
