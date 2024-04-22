@@ -1,5 +1,5 @@
 import { MantineColorsTuple, createTheme } from '@mantine/core'
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useMemo, useState } from 'react'
 import { limeTheme } from '../themes'
 
 const initTheme = createTheme({
@@ -19,7 +19,7 @@ const useThemeContext = () => {
 	return useContext(ThemeContext)
 }
 
-function ThemeProvider({ children }: IThemeProvider) {
+function ThemeProvider({ children }: Readonly<IThemeProvider>) {
 	const [theme, setTheme] = useState(initTheme)
 
 	const handleSetTheme = (theme: MantineColorsTuple) => {
@@ -33,7 +33,9 @@ function ThemeProvider({ children }: IThemeProvider) {
 		})
 	}
 
-	return <ThemeContext.Provider value={{ theme, handleSetTheme }}>{children}</ThemeContext.Provider>
+	const value = useMemo(() => ({ theme, handleSetTheme }), [theme])
+
+	return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
 
 export { ThemeProvider, useThemeContext }

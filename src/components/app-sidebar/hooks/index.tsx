@@ -7,7 +7,7 @@ function useSidebarMap() {
 		{
 			title: 'Hooks',
 			path: AppConfig.router.hooks.path,
-			icon: <RiReactjsLine size={14} color="#788AEB" />,
+			icon: <RiReactjsLine size={14} color="var(--mantine-color-color-filled)" />,
 			items: [
 				{
 					innerText: AppConfig.router.hooks.children.useState.innerText,
@@ -54,7 +54,7 @@ function useSidebarMap() {
 		{
 			title: 'Library',
 			path: '',
-			icon: <RiBookMarkedLine size={14} color="#788AEB" />,
+			icon: <RiBookMarkedLine size={14} color="var(--mantine-color-color-filled)" />,
 			items: [
 				{
 					innerText: AppConfig.router.redux.innerText,

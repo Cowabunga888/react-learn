@@ -1,5 +1,5 @@
 import React from 'react'
-import './style/style.css'
+import './css/style.css'
 import AppSideBar from '../app-sidebar'
 interface IAppBody {
 	children: React.ReactNode

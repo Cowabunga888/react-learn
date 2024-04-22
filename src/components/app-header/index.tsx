@@ -3,7 +3,7 @@ import { RiAncientGateFill } from '@remixicon/react'
 import { NavLink } from 'react-router-dom'
 import AuthNavbarButtons from '../app-auth/auth-navbar-buttons'
 import useNavData from './hooks/data'
-import './style/style.css'
+import './css/style.css'
 
 function AppHeader() {
 	const navData = useNavData()
@@ -12,7 +12,7 @@ function AppHeader() {
 		<header className="app-header">
 			<NavLink to={'/'} className="flex gap-3 items-center">
 				<span className="p-2 rounded-md border border-dashed">
-					<RiAncientGateFill />
+					<RiAncientGateFill color="var(--mantine-color-color-filled)" />
 				</span>
 				<span>Home</span>
 			</NavLink>

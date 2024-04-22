@@ -8,7 +8,7 @@ function ReactQueryPage() {
 
 	return (
 		<div className="p-2">
-			<div className="p-2 text-center text-xl text-[#788AEB] font-bold uppercase flex items-center justify-center">
+			<div className="p-2 text-center text-xl text-[var(--mantine-color-color-filled)] font-bold uppercase flex items-center justify-center">
 				<RiReactjsLine /> <span>React Query</span>
 			</div>
 
@@ -16,7 +16,7 @@ function ReactQueryPage() {
 				{navData.map((nav, i) => {
 					return (
 						<NavLink to={nav.path} key={randomId()} className="flex gap-1">
-							<span className="font-bold text-[#788AEB]">#</span>
+							<span className="font-bold text-[var(--mantine-color-color-filled)]">#</span>
 							<span>{nav.innerText}</span>
 						</NavLink>
 					)

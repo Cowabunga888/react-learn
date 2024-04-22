@@ -3,7 +3,7 @@ import { randomId } from '@mantine/hooks'
 import clsx from 'clsx'
 import { NavLink, useLocation } from 'react-router-dom'
 import useSidebarMap from './hooks'
-import './style/style.css'
+import './css/style.css'
 
 function AppSideBar() {
 	const sidebarMap = useSidebarMap()
@@ -21,9 +21,9 @@ function AppSideBar() {
 									<Accordion.Panel
 										classNames={{ content: '!p-2' }}
 										className={clsx(
-											{ 'ml-2 border-l-2 border-lime-400': true },
+											{ 'ml-2 border-l-2 border-[var(--mantine-color-color-filled)]': true },
 											{
-												'bg-lime-100': pathname.includes(item.path),
+												'bg-[var(--mantine-color-color-light)]': pathname.includes(item.path),
 											}
 										)}
 									>
