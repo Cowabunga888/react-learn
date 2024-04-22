@@ -2,12 +2,22 @@ import { ColorSwatch, Menu, ThemeIcon } from '@mantine/core'
 import { randomId } from '@mantine/hooks'
 import { RiPaletteLine } from '@remixicon/react'
 import { useThemeContext } from '../providers/mantine-provider/theme-provider'
-import { limeTheme, redTheme, tomatoTheme, violetTheme, yellowTheme } from '../providers/mantine-provider/themes'
+import {
+	blueTheme,
+	defaultTheme,
+	limeTheme,
+	redTheme,
+	tomatoTheme,
+	violetTheme,
+	yellowTheme,
+} from '../providers/mantine-provider/themes'
 
 function ThemeSwitch() {
 	const { handleSetTheme } = useThemeContext()
 
 	const themes = [
+		{ label: 'Default', scheme: defaultTheme },
+		{ label: 'Blue', scheme: blueTheme },
 		{ label: 'Lime', scheme: limeTheme },
 		{ label: 'Yellow', scheme: yellowTheme },
 		{ label: 'Tomato', scheme: tomatoTheme },

@@ -24,6 +24,7 @@ import BasicApiFetchingPage from '../../../pages/react-learn-page/pages/library-
 import ReactQueryApiFetchingPage from '../../../pages/react-learn-page/pages/library-page/pages/react-query-page/pages/react-query-fetching'
 import TanstackTablePage from '../../../pages/react-learn-page/pages/library-page/pages/tanstack-table-page'
 import BasicTanstackTable from '../../../pages/react-learn-page/pages/library-page/pages/tanstack-table-page/pages/basic-table'
+import AboutPage from '../../../pages/about'
 
 function useAppRouters() {
 	const routerObject = createBrowserRouter([
@@ -151,6 +152,10 @@ function useAppRouters() {
 							],
 						},
 					],
+				},
+				{
+					path: AppConfig.router.about.path,
+					element: <AboutPage />,
 				},
 			],
 		},
