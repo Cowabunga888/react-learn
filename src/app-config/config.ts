@@ -4,139 +4,107 @@ export default Object.freeze({
 			path: '',
 			innerText: 'Home',
 		},
-		hooks: {
-			path: 'hooks',
-			innerText: 'Hooks',
-			children: {
-				useState: {
-					path: 'useState',
-					innerText: 'useState',
-				},
-				useEffect: {
-					path: 'useEffect',
-					innerText: 'useEffect',
-				},
-				useLayoutEffect: {
-					path: 'useLayoutEffect',
-					innerText: 'useLayoutEffect',
-				},
-				useRef: {
-					path: 'useRef',
-					innerText: 'useRef',
-				},
-				Memo: {
-					path: 'Memo',
-					innerText: 'Memo',
-				},
-				useCallBack: {
-					path: 'useCallBack',
-					innerText: 'useCallBack',
-				},
-				useMemo: {
-					path: 'useMemo',
-					innerText: 'useMemo',
-				},
-				useReducer: {
-					path: 'useReducer',
-					innerText: 'useReducer',
-				},
-				useContext: {
-					path: 'useContext',
-					innerText: 'useContext',
-				},
-				useImperativeHandle: {
-					path: 'useImperativeHandle',
-					innerText: 'useImperativeHandle',
-				},
-			},
+		about: {
+			path: 'about-me',
+			innerText: 'Home',
 		},
-		library: {
-			path: 'library',
-			innerText: 'Library',
+		reactLearn: {
+			path: 'react-learn',
+			innerText: 'Learning ReactJS',
 			children: {
-				redux: {
-					path: 'redux',
-					innerText: 'Redux',
+				hooks: {
+					path: 'hooks',
+					innerText: 'Hooks',
 					children: {
-						general: {
-							path: '',
-							innerText: 'General',
+						useState: {
+							path: 'useState',
+							innerText: 'useState',
 						},
-						basic: {
-							path: 'basic',
-							innerText: 'Basic',
+						useEffect: {
+							path: 'useEffect',
+							innerText: 'useEffect',
 						},
-						advance: {
-							path: 'advance',
-							innerText: 'Advance',
+						useLayoutEffect: {
+							path: 'useLayoutEffect',
+							innerText: 'useLayoutEffect',
+						},
+						useRef: {
+							path: 'useRef',
+							innerText: 'useRef',
+						},
+						Memo: {
+							path: 'Memo',
+							innerText: 'Memo',
+						},
+						useCallBack: {
+							path: 'useCallBack',
+							innerText: 'useCallBack',
+						},
+						useMemo: {
+							path: 'useMemo',
+							innerText: 'useMemo',
+						},
+						useReducer: {
+							path: 'useReducer',
+							innerText: 'useReducer',
+						},
+						useContext: {
+							path: 'useContext',
+							innerText: 'useContext',
+						},
+						useImperativeHandle: {
+							path: 'useImperativeHandle',
+							innerText: 'useImperativeHandle',
 						},
 					},
 				},
-				reactQuery: {
-					path: 'react-query',
-					innerText: 'React Query',
+				library: {
+					path: 'library',
+					innerText: 'Library',
 					children: {
-						basic: {
-							path: 'basic',
-							innerText: 'Basic',
+						redux: {
+							path: 'redux',
+							innerText: 'Redux',
+							children: {
+								general: {
+									path: '',
+									innerText: 'General',
+								},
+								basic: {
+									path: 'basic',
+									innerText: 'Basic',
+								},
+								advance: {
+									path: 'advance',
+									innerText: 'Advance',
+								},
+							},
 						},
-						queryFetching: {
-							path: 'query-fetching',
-							innerText: 'queryFetching',
+						reactQuery: {
+							path: 'react-query',
+							innerText: 'React Query',
+							children: {
+								basic: {
+									path: 'basic',
+									innerText: 'Basic',
+								},
+								queryFetching: {
+									path: 'query-fetching',
+									innerText: 'queryFetching',
+								},
+							},
+						},
+						tanstackTable: {
+							path: 'tanstack-table',
+							innerText: 'Tanstack Table',
+							children: {
+								basic: {
+									path: 'basic',
+									innerText: 'Basic Table',
+								},
+							},
 						},
 					},
-				},
-				tanstackTable: {
-					path: 'tanstack-table',
-					innerText: 'Tanstack Table',
-					children: {
-						basic: {
-							path: 'basic',
-							innerText: 'Basic Table',
-						},
-					},
-				},
-			},
-		},
-		redux: {
-			path: 'redux',
-			innerText: 'Redux',
-			children: {
-				general: {
-					path: '',
-					innerText: 'General',
-				},
-				basic: {
-					path: 'basic',
-					innerText: 'Basic',
-				},
-				advance: {
-					path: 'advance',
-					innerText: 'Advance',
-				},
-			},
-		},
-		reactQuery: {
-			path: 'react-query',
-			innerText: 'React Query',
-			children: {
-				basic: {
-					path: 'basic',
-					innerText: 'Basic',
-				},
-				queryFetching: {
-					path: 'query-fetching',
-					innerText: 'queryFetching',
-				},
-			},
-		},
-		tanstackTable: {
-			path: 'tanstack-table',
-			innerText: 'Tanstack Table',
-			children: {
-				basic: {
-					path: 'basic',
-					innerText: 'Basic Table',
 				},
 			},
 		},
