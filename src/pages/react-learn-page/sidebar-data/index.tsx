@@ -1,8 +1,8 @@
 import React from 'react'
-import { AppConfig } from '../../../app-config'
 import { RiBookMarkedLine, RiReactjsLine } from '@remixicon/react'
+import { AppConfig } from 'src/app-config'
 
-function useSidebarMap() {
+function useReactLearnSidebarMap() {
 	return [
 		{
 			title: 'Hooks',
@@ -57,14 +57,17 @@ function useSidebarMap() {
 			icon: <RiBookMarkedLine size={14} color="var(--mantine-color-color-filled)" />,
 			items: [
 				{
+					disable: false,
 					innerText: AppConfig.router.reactLearn.children.library.children.redux.innerText,
 					path: `/${AppConfig.router.reactLearn.path}/${AppConfig.router.reactLearn.children.library.path}/${AppConfig.router.reactLearn.children.library.children.redux.path}`,
 				},
 				{
+					disable: true,
 					innerText: AppConfig.router.reactLearn.children.library.children.reactQuery.innerText,
 					path: `/${AppConfig.router.reactLearn.path}/${AppConfig.router.reactLearn.children.library.path}/${AppConfig.router.reactLearn.children.library.children.reactQuery.path}`,
 				},
 				{
+					disable: true,
 					innerText: AppConfig.router.reactLearn.children.library.children.tanstackTable.innerText,
 					path: `/${AppConfig.router.reactLearn.path}/${AppConfig.router.reactLearn.children.library.path}/${AppConfig.router.reactLearn.children.library.children.tanstackTable.path}`,
 				},
@@ -73,4 +76,4 @@ function useSidebarMap() {
 	]
 }
 
-export default useSidebarMap
+export default useReactLearnSidebarMap

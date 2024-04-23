@@ -109,7 +109,7 @@ export default Object.freeze({
 			},
 		},
 		notFound: {
-			path: '404',
+			path: 'not-found',
 			innerText: 'Not-found',
 		},
 	},
