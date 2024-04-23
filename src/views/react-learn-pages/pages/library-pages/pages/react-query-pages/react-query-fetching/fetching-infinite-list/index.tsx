@@ -1,8 +1,8 @@
 import { Loader, ScrollArea } from '@mantine/core'
 import { randomId, useIntersection } from '@mantine/hooks'
 import { useEffect } from 'react'
-import { useGetStudentsList } from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/hooks'
-import StudentListItem from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/components/student-list-item'
+import StudentListItem from 'src/pages/react-learn-page/pages/library-page/pages/react-query-page/components/student-list-item'
+import { useGetStudentsList } from 'src/pages/react-learn-page/pages/library-page/pages/react-query-page/hooks'
 
 function ReactQueryInfiniteListFetching() {
 	const { data: students, isLoading, hasNextPage, fetchNextPage } = useGetStudentsList({ page: 1, perPage: 10 })

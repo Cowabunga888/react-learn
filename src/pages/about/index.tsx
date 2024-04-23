@@ -1,5 +1,4 @@
-import React from 'react'
-import AboutPageView from '../../views/about'
+import AboutPageView from 'src/views/about'
 
 function AboutPage() {
 	return <AboutPageView />

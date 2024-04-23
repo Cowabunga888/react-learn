@@ -2,7 +2,7 @@ import { Avatar, FileInput, Select, TextInput } from '@mantine/core'
 import { RiFileImageLine } from '@remixicon/react'
 import { useState } from 'react'
 import { useFormContext } from 'react-hook-form'
-import { getBase64 } from '../../../../../../../../utils/get-base64'
+import { getBase64 } from 'src/utils/get-base64'
 
 interface IDynamicFormInput {
 	allFieldsRequired?: boolean

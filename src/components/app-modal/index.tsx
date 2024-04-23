@@ -17,6 +17,10 @@ function AppModal() {
 			withCloseButton={false}
 			centered
 			size={size}
+			overlayProps={{
+				backgroundOpacity: 0.55,
+				blur: 3,
+			}}
 		>
 			<>{modalContent}</>
 		</Modal>

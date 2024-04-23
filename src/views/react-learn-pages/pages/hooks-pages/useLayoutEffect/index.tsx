@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core'
 import { RiAddLine } from '@remixicon/react'
 import { useLayoutEffect, useState } from 'react'
-import AppBlockQuote from '../../../../../components/block-quotes'
+import AppBlockQuote from 'src/components/block-quotes'
 
 function UseLayoutEffectPageView() {
 	const [count, setCount] = useState<number>(0)

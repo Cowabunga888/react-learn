@@ -21,7 +21,6 @@
 		"axios": "^1.6.8",
 		"clsx": "^2.1.0",
 		"json-server": "^1.0.0-alpha.23",
-		"nanoid": "^5.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.51.1",

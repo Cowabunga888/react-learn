@@ -4,6 +4,8 @@ import { defaultTheme } from '../themes'
 
 const initTheme = createTheme({
 	primaryColor: 'color',
+	autoContrast: true,
+	luminanceThreshold: 0.3,
 	colors: {
 		color: defaultTheme,
 	},

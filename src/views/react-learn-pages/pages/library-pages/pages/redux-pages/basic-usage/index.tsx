@@ -6,7 +6,7 @@ import TodoSearchInput from './components/todo-search-input'
 import TodoStatusFilter from './components/todo-status-filter'
 import './style.css'
 import { randomId } from '@mantine/hooks'
-import { useAppSelector } from '../../../../../../../store/redux-app-store/hooks'
+import { useAppSelector } from 'src/store/redux-app-store/hooks'
 
 function ReduxBasicUsage() {
 	const todoState = useAppSelector((state) => state.todoForm)

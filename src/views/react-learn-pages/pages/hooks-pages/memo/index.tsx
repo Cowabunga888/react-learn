@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core'
 import { useState } from 'react'
 import ChildComponent from './child'
-import AppBlockQuote from '../../../../../components/block-quotes'
+import AppBlockQuote from 'src/components/block-quotes'
 
 function MemoPageView() {
 	const [count1, setCount1] = useState<number>(0)

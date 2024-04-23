@@ -3,11 +3,8 @@ import { useDisclosure } from '@mantine/hooks'
 import { RiUserAddLine, RiUserSettingsLine, RiUserUnfollowLine } from '@remixicon/react'
 import { useRef, useState } from 'react'
 import UpSertModalBody from '../../components/upsert-modal-body'
-import { useGetStudentsTable } from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/hooks'
-import {
-	IStudentList,
-	IStudentTable,
-} from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/type'
+import { useGetStudentsTable } from 'src/pages/react-learn-page/pages/library-page/pages/react-query-page/hooks'
+import { IStudentList, IStudentTable } from 'src/pages/react-learn-page/pages/library-page/pages/react-query-page/type'
 
 function ReactQueryTableFetching() {
 	enum modalType {

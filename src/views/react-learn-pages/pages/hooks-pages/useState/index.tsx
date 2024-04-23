@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core'
 import { RiAddLine, RiSubtractLine } from '@remixicon/react'
 import { useState } from 'react'
-import AppBlockQuote from '../../../../../components/block-quotes'
+import AppBlockQuote from 'src/components/block-quotes'
 
 function UseStatePageView() {
 	const [counter, setCounter] = useState<number>(1)

@@ -1,8 +1,7 @@
-import { RiReactjsLine } from '@remixicon/react'
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
 import { randomId } from '@mantine/hooks'
-import { AppConfig } from '../../../../../../app-config'
+import { RiReactjsLine } from '@remixicon/react'
+import { NavLink, Outlet } from 'react-router-dom'
+import { AppConfig } from 'src/app-config'
 
 function TanstackTablePage() {
 	const navData = Object.values(AppConfig.router.reactLearn.children.library.children.tanstackTable.children)

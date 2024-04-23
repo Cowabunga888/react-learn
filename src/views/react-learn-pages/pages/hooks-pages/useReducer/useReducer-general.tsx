@@ -1,4 +1,4 @@
-import AppBlockQuote from '../../../../../components/block-quotes'
+import AppBlockQuote from 'src/components/block-quotes'
 
 function UseReducerGeneral() {
 	return (

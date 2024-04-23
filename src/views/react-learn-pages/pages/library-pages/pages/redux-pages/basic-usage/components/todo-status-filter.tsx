@@ -1,6 +1,6 @@
 import { Group, Radio } from '@mantine/core'
 import { randomId } from '@mantine/hooks'
-import { useAppSelector } from '../../../../../../../../store/redux-app-store/hooks'
+import { useAppSelector } from 'src/store/redux-app-store/hooks'
 
 const style = {
 	body: {

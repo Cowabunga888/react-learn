@@ -1,6 +1,6 @@
 import { Button } from '@mantine/core'
 import { useEffect, useRef, useState } from 'react'
-import AppBlockQuote from '../../../../../components/block-quotes'
+import AppBlockQuote from 'src/components/block-quotes'
 
 //let timerIntervalFunc: any
 
