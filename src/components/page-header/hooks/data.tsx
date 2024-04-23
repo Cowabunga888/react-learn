@@ -19,9 +19,9 @@ function useNavData() {
 			innerText: 'React Learn',
 		},
 		{
-			path: '#',
+			path: AppConfig.router.notFound.path,
 			icon: '',
-			innerText: 'Nav_03',
+			innerText: '404',
 		},
 	]
 }
