@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
-You could visit site [Here...](https://react-learn-coral.vercel.app/react-learn).\
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
+You could visit site [Here...](https://react-learn-coral.vercel.app/react-learn)\
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
