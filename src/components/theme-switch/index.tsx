@@ -26,7 +26,7 @@ function ThemeSwitch() {
 	]
 
 	return (
-		<Menu withArrow shadow="md" width={200}>
+		<Menu withArrow shadow="md" width={150}>
 			<Menu.Target>
 				<ThemeIcon radius="xl" variant="light">
 					<RiPaletteLine size={17} />
@@ -39,7 +39,8 @@ function ThemeSwitch() {
 						<Menu.Item
 							key={randomId()}
 							onClick={() => handleSetTheme(theme.scheme)}
-							leftSection={<ColorSwatch color={`${theme.scheme[5]}`} size={20} />}
+							classNames={{ itemLabel: 'text-xs' }}
+							leftSection={<ColorSwatch color={`${theme.scheme[5]}`} size={15} />}
 						>
 							{theme.label}
 						</Menu.Item>
