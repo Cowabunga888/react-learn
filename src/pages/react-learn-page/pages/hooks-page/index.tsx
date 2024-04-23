@@ -1,4 +1,4 @@
-import HooksPageView from '../../../../views/react-learn-pages/pages/hooks-pages'
+import HooksPageView from 'src/views/react-learn-pages/pages/hooks-pages'
 
 function HooksPage() {
 	return <HooksPageView />

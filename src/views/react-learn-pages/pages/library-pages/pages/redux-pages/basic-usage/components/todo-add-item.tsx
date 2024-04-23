@@ -1,9 +1,9 @@
 import { Button, Input, Select } from '@mantine/core'
 import { ChangeEvent, useState } from 'react'
-import { nanoid } from 'nanoid'
-import { useAppDispatch, useAppSelector } from '../../../../../../../../store/redux-app-store/hooks'
-import { todoAddInputOnchange, todoAddTodo } from '../../../../../../../../store/redux-app-store/slices/todo-form-slice'
-import { ITodoItem, TODO_PRIOTITY } from '../../../../../../../../store/redux-app-store/types/todo-form-type'
+import { randomId } from '@mantine/hooks'
+import { useAppDispatch, useAppSelector } from 'src/store/redux-app-store/hooks'
+import { todoAddInputOnchange, todoAddTodo } from 'src/store/redux-app-store/slices/todo-form-slice'
+import { ITodoItem, TODO_PRIOTITY } from 'src/store/redux-app-store/types/todo-form-type'
 
 function TodoAddItem() {
 	const todoState = useAppSelector((state) => state.todoForm)
@@ -21,7 +21,7 @@ function TodoAddItem() {
 	const handleAddButtonClick = () => {
 		if (todoState.todoInput !== '') {
 			const todo: ITodoItem = {
-				id: nanoid(),
+				id: randomId(),
 				label: todoState.todoInput,
 				priority: {
 					value: priority ?? defaultPriority,

@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { randomId } from '@mantine/hooks'
-import { AppConfig } from '../../../../../../app-config'
+import { AppConfig } from 'src/app-config'
 
 function ReduxPage() {
 	const navData = Object.values(AppConfig.router.reactLearn.children.library.children.redux.children)

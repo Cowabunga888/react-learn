@@ -5,17 +5,17 @@ import DynamicFormInput from '../dynamic-input'
 import { upsertFields } from './fields'
 import toast from 'react-hot-toast'
 import { randomId } from '@mantine/hooks'
-import {
-	IStudentList,
-	IStudentTable,
-} from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/type'
+
 import { useAddNewStudentTable } from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/hooks/useAddNewStudentTable'
 import { useUpdateStudentTable } from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/hooks/useUpdateStudentTable'
+
+import { useDeleteStudentTable } from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/hooks/useDeleteStudentTable'
 import {
 	IAddNewStudentTableParams,
+	IStudentList,
+	IStudentTable,
 	IUpdateStudentTableParams,
-} from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/tanstack-table-page/type'
-import { useDeleteStudentTable } from '../../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/hooks/useDeleteStudentTable'
+} from 'src/pages/react-learn-page/pages/library-page/pages/react-query-page/type'
 
 interface IUpSertModalBody {
 	type: string

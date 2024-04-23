@@ -1,11 +1,8 @@
 import { Checkbox } from '@mantine/core'
 import { RiCloseLine } from '@remixicon/react'
-import { ITodoItem, TODO_PRIOTITY } from '../../../../../../../../store/redux-app-store/types/todo-form-type'
-import { useAppDispatch } from '../../../../../../../../store/redux-app-store/hooks'
-import {
-	todoDeleteTodo,
-	todoMarkItemAsDone,
-} from '../../../../../../../../store/redux-app-store/slices/todo-form-slice'
+import { useAppDispatch } from 'src/store/redux-app-store/hooks'
+import { todoDeleteTodo, todoMarkItemAsDone } from 'src/store/redux-app-store/slices/todo-form-slice'
+import { ITodoItem, TODO_PRIOTITY } from 'src/store/redux-app-store/types/todo-form-type'
 
 interface ITodoItemProps {
 	todo: ITodoItem

@@ -1,8 +1,8 @@
 import { Button, Input } from '@mantine/core'
 import { RiSearch2Line } from '@remixicon/react'
 import { ChangeEvent } from 'react'
-import { useAppDispatch, useAppSelector } from '../../../../../../../../store/redux-app-store/hooks'
-import { todoInputOnchange } from '../../../../../../../../store/redux-app-store/slices/todo-form-slice'
+import { useAppDispatch, useAppSelector } from 'src/store/redux-app-store/hooks'
+import { todoInputOnchange } from 'src/store/redux-app-store/slices/todo-form-slice'
 
 function TodoSearchInput() {
 	const todoState = useAppSelector((state) => state.todoForm)

@@ -1,5 +1,5 @@
 import { Select } from '@mantine/core'
-import { useAppSelector } from '../../../../../../../../store/redux-app-store/hooks'
+import { useAppSelector } from 'src/store/redux-app-store/hooks'
 
 function TodoPriorityFilter() {
 	const todoState = useAppSelector((state) => state.todoForm)

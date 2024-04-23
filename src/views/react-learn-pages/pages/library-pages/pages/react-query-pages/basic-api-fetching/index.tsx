@@ -1,8 +1,8 @@
 import { Loader, ScrollArea } from '@mantine/core'
 import { useEffect, useState } from 'react'
-import { IStudent } from '../../../../../../../pages/react-learn-page/pages/library-page/pages/tanstack-table-page/type'
-import StudentListItem from '../../../../../../../pages/react-learn-page/pages/library-page/pages/react-query-page/components/student-list-item'
-import http from '../../../../../../../utils/http'
+import StudentListItem from 'src/pages/react-learn-page/pages/library-page/pages/react-query-page/components/student-list-item'
+import { IStudent } from 'src/pages/react-learn-page/pages/library-page/pages/tanstack-table-page/type'
+import http from 'src/utils/http'
 
 function BasicApiFetchingView() {
 	// 1. create state

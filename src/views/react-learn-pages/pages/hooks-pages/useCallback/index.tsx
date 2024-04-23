@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 import ChildComponent from './child'
-import AppBlockQuote from '../../../../../components/block-quotes'
+import AppBlockQuote from 'src/components/block-quotes'
 
 function UseCallbackPageView() {
 	const [count1, setCount1] = useState<number>(0)

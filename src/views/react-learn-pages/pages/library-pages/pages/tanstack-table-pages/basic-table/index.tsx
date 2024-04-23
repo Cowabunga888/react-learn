@@ -16,7 +16,7 @@ import { useState } from 'react'
 import { StudentTableColumnDef } from './components/column-def'
 import ColFilterMore from './components/filter-more'
 import { fuzzyFilter } from './components/filter-more/filter-funcs'
-import { useGetStudentsDataTanstackTable } from '../../../../../../../pages/react-learn-page/pages/library-page/pages/tanstack-table-page/hooks'
+import { useGetStudentsDataTanstackTable } from 'src/pages/react-learn-page/pages/library-page/pages/tanstack-table-page/hooks'
 
 function BasicTanstackTableView() {
 	const [pagination, setPagination] = useState<PaginationState>({

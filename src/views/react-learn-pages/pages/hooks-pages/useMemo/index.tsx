@@ -1,7 +1,7 @@
 import { Button, Input } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import { randomId } from '@mantine/hooks'
-import AppBlockQuote from '../../../../../components/block-quotes'
+import AppBlockQuote from 'src/components/block-quotes'
 
 function UseMemoPageView() {
 	const [name, setName] = useState<string>('')

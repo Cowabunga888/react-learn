@@ -1,7 +1,7 @@
 import { Checkbox, Popover } from '@mantine/core'
 import { createColumnHelper } from '@tanstack/react-table'
 import { useDisclosure } from '@mantine/hooks'
-import { IStudent } from '../../../../../../../../../pages/react-learn-page/pages/library-page/pages/tanstack-table-page/type'
+import { IStudent } from 'src/pages/react-learn-page/pages/library-page/pages/tanstack-table-page/type'
 
 const columnHelper = createColumnHelper<IStudent>()
 

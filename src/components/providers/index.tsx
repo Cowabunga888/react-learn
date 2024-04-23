@@ -6,6 +6,7 @@ import AppReduxStoreProvider from './app-redux-store-provider'
 import { AppContextStoreProvider } from '../../store/context-app-store/app-store-provider'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster } from 'react-hot-toast'
+import AppModal from '../app-modal'
 
 interface IProvider {
 	children: React.ReactNode
@@ -22,6 +23,7 @@ function AppProvider({ children }: IProvider) {
 						<AppContextStoreProvider>{children}</AppContextStoreProvider>
 					</AppReduxStoreProvider>
 					<ReactQueryDevtools initialIsOpen={false} />
+					<AppModal />
 					<Toaster />
 				</QueryClientProvider>
 			</AppMantineProvider>

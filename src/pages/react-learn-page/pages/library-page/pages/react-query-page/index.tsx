@@ -1,7 +1,7 @@
 import { randomId } from '@mantine/hooks'
 import { RiReactjsLine } from '@remixicon/react'
 import { NavLink, Outlet } from 'react-router-dom'
-import { AppConfig } from '../../../../../../app-config'
+import { AppConfig } from 'src/app-config'
 
 function ReactQueryPage() {
 	const navData = Object.values(AppConfig.router.reactLearn.children.library.children.reactQuery.children)
