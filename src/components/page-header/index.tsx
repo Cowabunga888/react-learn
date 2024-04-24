@@ -8,7 +8,6 @@ import useNavData from './hooks/data'
 function PageNavigationHeader() {
 	const navData = useNavData()
 	const { pathname } = useLocation()
-
 	return (
 		<header className="app-header">
 			<nav className="app-header__nav-container">

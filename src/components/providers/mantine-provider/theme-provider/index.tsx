@@ -1,13 +1,13 @@
 import { MantineColorsTuple, createTheme } from '@mantine/core'
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
-import { defaultTheme } from '../themes'
+import { yellowTheme } from '../themes'
 
 const initTheme = createTheme({
 	primaryColor: 'color',
 	autoContrast: true,
 	luminanceThreshold: 0.3,
 	colors: {
-		color: defaultTheme,
+		color: yellowTheme,
 	},
 })
 
@@ -40,7 +40,7 @@ function ThemeProvider({ children }: Readonly<IThemeProvider>) {
 
 	useEffect(() => {
 		if (localStorage.getItem('theme')) {
-			handleSetTheme(JSON.parse(localStorage.getItem('theme') as any))
+			handleSetTheme(JSON.parse(localStorage.getItem('theme') as string))
 		}
 	}, [])
 

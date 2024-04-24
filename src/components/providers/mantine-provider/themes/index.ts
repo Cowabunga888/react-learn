@@ -27,16 +27,16 @@ const blueTheme: MantineColorsTuple = [
 ]
 
 const limeTheme: MantineColorsTuple = [
-	'#effee7',
-	'#e0f8d4',
-	'#c2efab',
-	'#a2e67e',
-	'#87de57',
-	'#75d940',
-	'#6bd731',
-	'#59be23',
-	'#4da91b',
-	'#3d920c',
+	'#f4fce7',
+	'#e8f6d6',
+	'#d1edae',
+	'#b9e382',
+	'#a3da5d',
+	'#96d545',
+	'#8fd238',
+	'#7aba29',
+	'#6ca521',
+	'#5a8f14',
 ]
 
 const yellowTheme: MantineColorsTuple = [
