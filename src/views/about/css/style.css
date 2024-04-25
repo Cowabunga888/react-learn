@@ -1,0 +1,8 @@
+.about-page {
+  position: relative;
+  background-image: url('../../../../public/assets/images/commons/background/bg_01.svg');
+}
+
+.about-section{
+  height: 100vh;
+}
