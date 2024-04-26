@@ -1,4 +1,4 @@
-import { Accordion, Badge, Tooltip } from '@mantine/core'
+import { Accordion, Badge } from '@mantine/core'
 import { randomId } from '@mantine/hooks'
 import clsx from 'clsx'
 import { NavLink, useLocation } from 'react-router-dom'

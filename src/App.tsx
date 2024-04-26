@@ -3,11 +3,9 @@ import AppBody from './components/app-body'
 
 function App() {
 	return (
-		<>
-			<AppBody>
-				<Outlet />
-			</AppBody>
-		</>
+		<AppBody>
+			<Outlet />
+		</AppBody>
 	)
 }
 
