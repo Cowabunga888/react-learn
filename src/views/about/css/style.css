@@ -4,5 +4,5 @@
 }
 
 .about-section {
-	@apply pt-[85px] h-screen;
+	@apply pt-[85px] p-[20px] h-screen;
 }

@@ -5,7 +5,7 @@ import SegmentNav from './components/segment-nav'
 import './css/style.css'
 
 function AboutPageView() {
-	const [navData, setNavdata] = useState({
+	const [navData, setNavData] = useState({
 		value: '#hello',
 		data: [
 			{
@@ -36,7 +36,7 @@ function AboutPageView() {
 	})
 
 	const handlesetNavData = (id: string) => {
-		setNavdata((prev) => {
+		setNavData((prev) => {
 			return {
 				...prev,
 				value: id,
