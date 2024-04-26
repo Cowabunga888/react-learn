@@ -53,6 +53,7 @@ function SegmentNav({ navData, handlesetNavData }: Readonly<ISegmentNav>) {
 					src={'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png'}
 				/>
 				<SegmentedControl
+					// color="var(--mantine-color-color-filled)"
 					classNames={{ root: '!bg-transparent' }}
 					withItemsBorders={false}
 					radius="xl"
