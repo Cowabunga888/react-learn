@@ -1,7 +1,12 @@
 import './style.css'
 
 function AboutHeader() {
-	return <div className="w-full h-screen blur-[2px] overflow-hidden about-header"></div>
+	return (
+		<div className="">
+			<p>Hello There 🧙‍♂️ </p>
+			<p className="text-xl">I'm Warlock</p>
+		</div>
+	)
 }
 
 export default AboutHeader

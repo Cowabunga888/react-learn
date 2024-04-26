@@ -1,8 +1,10 @@
-import { Avatar, Menu, SegmentedControl } from '@mantine/core'
+import { Avatar, Indicator, Menu, SegmentedControl } from '@mantine/core'
 import { randomId } from '@mantine/hooks'
-import { useResponsiveDevice } from 'src/hooks'
-import './style.css'
 import { memo } from 'react'
+import { useResponsiveDevice } from 'src/hooks'
+
+import DownLoadCVButton from 'src/components/button/download-cv-button'
+import './style.css'
 
 interface ISegmentNav {
 	navData: { value: string; data: { label: React.ReactNode; value: string }[] }
@@ -14,15 +16,17 @@ function SegmentNav({ navData, handlesetNavData }: Readonly<ISegmentNav>) {
 
 	if (device === 'mobile') {
 		return (
-			<div className="sticky top-3 flex justify-end px-2">
+			<div className="sticky top-3 flex justify-end px-2 z-10">
 				<Menu withArrow shadow="md" width={150}>
 					<Menu.Target>
-						<Avatar
-							radius="xl"
-							src={
-								'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png'
-							}
-						/>
+						<Indicator color="lime" size={8} processing>
+							<Avatar
+								radius="xl"
+								src={
+									'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png'
+								}
+							/>
+						</Indicator>
 					</Menu.Target>
 
 					<Menu.Dropdown>
@@ -39,6 +43,10 @@ function SegmentNav({ navData, handlesetNavData }: Readonly<ISegmentNav>) {
 								</Menu.Item>
 							)
 						})}
+
+						<div className="mt-2">
+							<DownLoadCVButton />
+						</div>
 					</Menu.Dropdown>
 				</Menu>
 			</div>
@@ -47,19 +55,25 @@ function SegmentNav({ navData, handlesetNavData }: Readonly<ISegmentNav>) {
 
 	return (
 		<div className="segment-container">
+			<span />
 			<div className="segment-content">
-				<Avatar
-					radius="xl"
-					src={'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png'}
-				/>
+				<Indicator color="lime" size={8} processing>
+					<Avatar
+						radius="xl"
+						src={'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png'}
+					/>
+				</Indicator>
 				<SegmentedControl
-					// color="var(--mantine-color-color-filled)"
 					classNames={{ root: '!bg-transparent' }}
 					withItemsBorders={false}
 					radius="xl"
 					value={navData.value}
 					data={navData.data}
 				/>
+			</div>
+
+			<div className="w-[130px]">
+				<DownLoadCVButton />
 			</div>
 		</div>
 	)
