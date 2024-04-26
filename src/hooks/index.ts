@@ -1,0 +1,1 @@
+export { useResponsiveDevice } from './useResponsiveDevice'
