@@ -4,10 +4,6 @@ export default Object.freeze({
 			path: '',
 			innerText: 'Home',
 		},
-		about: {
-			path: 'about-me',
-			innerText: 'Home',
-		},
 		reactLearn: {
 			path: 'react-learn',
 			innerText: 'Learning ReactJS',

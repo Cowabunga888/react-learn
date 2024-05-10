@@ -2,7 +2,6 @@ import { createBrowserRouter } from 'react-router-dom'
 import App from 'src/App'
 import { AppConfig } from 'src/app-config'
 import NotFoundPage from 'src/pages/404'
-import AboutPage from 'src/pages/about'
 import GeneralPage from 'src/pages/general-page'
 import ReactLearnPage from 'src/pages/react-learn-page'
 import HooksPage from 'src/pages/react-learn-page/pages/hooks-page'
@@ -152,10 +151,6 @@ function useAppRouters() {
 							],
 						},
 					],
-				},
-				{
-					path: AppConfig.router.about.path,
-					element: <AboutPage />,
 				},
 			],
 		},

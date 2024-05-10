@@ -9,11 +9,6 @@ function useNavData() {
 			innerText: 'Home',
 		},
 		{
-			path: AppConfig.router.about.path,
-			icon: '',
-			innerText: 'About me',
-		},
-		{
 			path: AppConfig.router.reactLearn.path,
 			icon: '',
 			innerText: 'React Learn',
