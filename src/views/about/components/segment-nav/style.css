@@ -1,6 +1,0 @@
-.segment-container {
-	@apply sticky top-10 flex items-center justify-between z-10 px-3 max-sm:hidden;
-}
-.segment-content {
-	@apply w-auto flex items-center justify-center gap-3 p-1 bg-[#F1F3F5] rounded-full;
-}
